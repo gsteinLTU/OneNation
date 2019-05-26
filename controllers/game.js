@@ -5,3 +5,18 @@
 exports.getGameIndex = (req, res, next) => {
     res.render('game/index.ejs', { pageTitle: 'OneNation' });
 };
+
+/**
+ * Display game interface
+ */
+exports.getGame = (req, res, next) => {
+    res.render('game/game.ejs', { pageTitle: 'Play - OneNation' });
+};
+
+/**
+ * Handle some game API requests
+ */
+exports.postGame = (req, res, next) => {
+    res.send('hi');
+};
+
