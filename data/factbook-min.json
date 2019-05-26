@@ -78,6 +78,17 @@
     "peak_elevation": 2620,
     "capital": "Luanda"
   },
+  "anguilla": {
+    "names": [
+      "Anguilla"
+    ],
+    "population": 17422,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 91,
+    "peak_elevation": 73,
+    "capital": "The Valley"
+  },
   "antigua_and_barbuda": {
     "names": [
       "Antigua And Barbuda",
@@ -1977,6 +1988,20 @@
     "peak_elevation": 8611,
     "capital": "Islamabad"
   },
+  "palau": {
+    "names": [
+      "Palau",
+      "Republic of Palau",
+      "Beluu er a Belau",
+      "Belau"
+    ],
+    "population": 21516,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 459,
+    "peak_elevation": 242,
+    "capital": "Ngerulmud"
+  },
   "panama": {
     "names": [
       "Panama",
@@ -2639,6 +2664,17 @@
     "peak_elevation": 48,
     "capital": "Grand Turk (Cockburn Town)"
   },
+  "tuvalu": {
+    "names": [
+      "Tuvalu"
+    ],
+    "population": 11147,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 26,
+    "peak_elevation": 5,
+    "capital": "Funafuti; note - the capital is an atoll of some 29 islets; administrative offices are in Vaiaku Village on Fongafale Islet"
+  },
   "uganda": {
     "names": [
       "Uganda",
@@ -2782,6 +2818,21 @@
     "land_area": 346,
     "peak_elevation": 474,
     "capital": "Charlotte Amalie"
+  },
+  "wallis_and_futuna": {
+    "names": [
+      "Wallis And Futuna",
+      "Territory of the Wallis and Futuna Islands",
+      "Wallis and Futuna",
+      "Territoire des Iles Wallis et Futuna",
+      "Wallis et Futuna"
+    ],
+    "population": 15763,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 142,
+    "peak_elevation": 522,
+    "capital": "Mata-Utu (on Ile Uvea)"
   },
   "western_sahara": {
     "names": [

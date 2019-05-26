@@ -34,7 +34,7 @@ const validCountry = key => {
     }
 
     // Excluding some very small nations
-    if (Number.parseInt(data['countries'][key]['data']['people']['population']['total']) < 25000) {
+    if (Number.parseInt(data['countries'][key]['data']['people']['population']['total']) < 10000) {
         return false;
     }
 
@@ -103,7 +103,6 @@ for (let c of countries) {
 
         minData[c]['names'] = names;
 
-
         minData[c]['population'] = countryData['people']['population']['total'];
         minData[c]['region'] = countryData['geography']['map_references'];
         minData[c]['landlocked'] = countryData['geography']['coastline']['value'] == 0;
@@ -125,5 +124,6 @@ for (let c of countries) {
     }
 }
 
-
 fs.writeFileSync('./data/factbook-min.json', JSON.stringify(minData, null, 2));
+
+console.log(`Wrote ${Object.keys(minData).length} countries to file.`);
