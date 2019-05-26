@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "test": "mocha"
+    "test": "mocha",
+    "parsejson": "node parse-json.js"
   },
   "repository": {
     "type": "git",
