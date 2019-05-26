@@ -1,6 +1,6 @@
 const data = require('../data/factbook-min.json');
 
-const countriesList = Object.keys(data['countries']).map(key => data['countries'][key]['data']['name']);
+const countriesList = Object.keys(data);
 
 /**
  * Get the page showing the overview of the game
