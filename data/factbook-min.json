@@ -4,7 +4,13 @@
       "Afghanistan",
       "Islamic Republic of Afghanistan",
       "Jamhuri-ye Islami-ye Afghanistan"
-    ]
+    ],
+    "population": 34940837,
+    "region": "Asia",
+    "landlocked": true,
+    "land_area": 652230,
+    "peak_elevation": 7492,
+    "capital": "Kabul"
   },
   "albania": {
     "names": [
@@ -12,7 +18,13 @@
       "Republic of Albania",
       "Republika e Shqiperise",
       "Shqiperia"
-    ]
+    ],
+    "population": 3057220,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 27398,
+    "peak_elevation": 2764,
+    "capital": "Tirana (Tirane)"
   },
   "algeria": {
     "names": [
@@ -20,40 +32,76 @@
       "People's Democratic Republic of Algeria",
       "Al Jumhuriyah al Jaza'iriyah ad Dimuqratiyah ash Sha'biyah",
       "Al Jaza'ir"
-    ]
+    ],
+    "population": 41657488,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 2381740,
+    "peak_elevation": 2908,
+    "capital": "Algiers"
   },
   "american_samoa": {
     "names": [
       "American Samoa",
       "AS"
-    ]
+    ],
+    "population": 50826,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 224,
+    "peak_elevation": 964,
+    "capital": "Pago Pago"
   },
   "andorra": {
     "names": [
       "Andorra",
       "Principality of Andorra",
       "Principat d'Andorra"
-    ]
+    ],
+    "population": 85708,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 468,
+    "peak_elevation": 2946,
+    "capital": "Andorra la Vella"
   },
   "angola": {
     "names": [
       "Angola",
       "Republic of Angola",
       "Republica de Angola"
-    ]
+    ],
+    "population": 30355880,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 1246700,
+    "peak_elevation": 2620,
+    "capital": "Luanda"
   },
   "antigua_and_barbuda": {
     "names": [
       "Antigua And Barbuda",
       "Antigua and Barbuda"
-    ]
+    ],
+    "population": 95882,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 442.6,
+    "peak_elevation": 402,
+    "capital": "Saint John's"
   },
   "argentina": {
     "names": [
       "Argentina",
       "Argentine Republic",
       "Republica Argentina"
-    ]
+    ],
+    "population": 44694198,
+    "region": "South America",
+    "landlocked": false,
+    "land_area": 2736690,
+    "peak_elevation": 6962,
+    "capital": "Buenos Aires"
   },
   "armenia": {
     "names": [
@@ -61,18 +109,36 @@
       "Republic of Armenia",
       "Hayastani Hanrapetut'yun",
       "Hayastan"
-    ]
+    ],
+    "population": 3038217,
+    "region": "Asia",
+    "landlocked": true,
+    "land_area": 28203,
+    "peak_elevation": 4090,
+    "capital": "Yerevan"
   },
   "aruba": {
     "names": [
       "Aruba"
-    ]
+    ],
+    "population": 116576,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 180,
+    "peak_elevation": 188,
+    "capital": "Oranjestad"
   },
   "australia": {
     "names": [
       "Australia",
       "Commonwealth of Australia"
-    ]
+    ],
+    "population": 23470145,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 7682300,
+    "peak_elevation": 2228,
+    "capital": "Canberra"
   },
   "austria": {
     "names": [
@@ -80,7 +146,13 @@
       "Republic of Austria",
       "Republik Oesterreich",
       "Oesterreich"
-    ]
+    ],
+    "population": 8793370,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 82445,
+    "peak_elevation": 3798,
+    "capital": "Vienna"
   },
   "azerbaijan": {
     "names": [
@@ -88,7 +160,13 @@
       "Republic of Azerbaijan",
       "Azarbaycan Respublikasi",
       "Azarbaycan"
-    ]
+    ],
+    "population": 10046516,
+    "region": "Asia",
+    "landlocked": true,
+    "land_area": 82629,
+    "peak_elevation": 4466,
+    "capital": "Baku (Baki, Baky)"
   },
   "bahamas_the": {
     "names": [
@@ -96,7 +174,13 @@
       "Commonwealth of The Bahamas",
       "The Bahamas",
       "Bahamas"
-    ]
+    ],
+    "population": 332634,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 10010,
+    "peak_elevation": 64,
+    "capital": "Nassau"
   },
   "bahrain": {
     "names": [
@@ -104,29 +188,54 @@
       "Kingdom of Bahrain",
       "Mamlakat al Bahrayn",
       "Al Bahrayn"
-    ]
+    ],
+    "population": 1442659,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 760,
+    "peak_elevation": 135,
+    "capital": "Manama"
   },
   "bangladesh": {
     "names": [
       "Bangladesh",
       "People's Republic of Bangladesh",
       "Gana Prajatantri Bangladesh"
-    ]
+    ],
+    "population": 159453001,
+    "region": "Asia",
+    "landlocked": false,
+    "land_area": 130170,
+    "peak_elevation": 1230,
+    "capital": "Dhaka"
   },
   "barbados": {
     "names": [
       "Barbados"
-    ]
+    ],
+    "population": 293131,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 430,
+    "peak_elevation": 336,
+    "capital": "Bridgetown"
   },
   "belarus": {
     "names": [
       "Belarus",
       "Republic of Belarus",
       "Respublika Byelarus'",
+      "/",
       "Respublika Belarus'",
       "Byelarus'",
       "Belarus'"
-    ]
+    ],
+    "population": 9527543,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 202900,
+    "peak_elevation": 346,
+    "capital": "Minsk"
   },
   "belgium": {
     "names": [
@@ -134,26 +243,51 @@
       "Kingdom of Belgium",
       "Royaume de Belgique",
       "Belgique",
+      "/",
       "Belgie",
       "Belgien"
-    ]
+    ],
+    "population": 11570762,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 30278,
+    "peak_elevation": 694,
+    "capital": "Brussels"
   },
   "belize": {
     "names": [
       "Belize"
-    ]
+    ],
+    "population": 385854,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 22806,
+    "peak_elevation": 1124,
+    "capital": "Belmopan"
   },
   "benin": {
     "names": [
       "Benin",
       "Republic of Benin",
       "Republique du Benin"
-    ]
+    ],
+    "population": 11340504,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 110622,
+    "peak_elevation": 658,
+    "capital": "Porto-Novo (constitutional capital); Cotonou (seat of government)"
   },
   "bermuda": {
     "names": [
       "Bermuda"
-    ]
+    ],
+    "population": 71176,
+    "region": "North America",
+    "landlocked": false,
+    "land_area": 54,
+    "peak_elevation": 79,
+    "capital": "Hamilton"
   },
   "bhutan": {
     "names": [
@@ -161,14 +295,26 @@
       "Kingdom of Bhutan",
       "Druk Gyalkhap",
       "Druk Yul"
-    ]
+    ],
+    "population": 766397,
+    "region": "Asia",
+    "landlocked": true,
+    "land_area": 38394,
+    "peak_elevation": 7570,
+    "capital": "Thimphu"
   },
   "bolivia": {
     "names": [
       "Bolivia",
       "Plurinational State of Bolivia",
       "Estado Plurinacional de Bolivia"
-    ]
+    ],
+    "population": 11306341,
+    "region": "South America",
+    "landlocked": true,
+    "land_area": 1083301,
+    "peak_elevation": 6542,
+    "capital": "La Paz (administrative capital); Sucre (constitutional [legislative and judicial] capital)"
   },
   "bosnia_and_herzegovina": {
     "names": [
@@ -176,13 +322,25 @@
       "Bosnia and Herzegovina",
       "Bosna i Hercegovina",
       "BiH"
-    ]
+    ],
+    "population": 3849891,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 51187,
+    "peak_elevation": 2386,
+    "capital": "Sarajevo"
   },
   "botswana": {
     "names": [
       "Botswana",
       "Republic of Botswana"
-    ]
+    ],
+    "population": 2249104,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 566730,
+    "peak_elevation": 1489,
+    "capital": "Gaborone"
   },
   "brazil": {
     "names": [
@@ -190,32 +348,62 @@
       "Federative Republic of Brazil",
       "Republica Federativa do Brasil",
       "Brasil"
-    ]
+    ],
+    "population": 208846892,
+    "region": "South America",
+    "landlocked": false,
+    "land_area": 8358140,
+    "peak_elevation": 2994,
+    "capital": "Brasilia"
   },
   "british_virgin_islands": {
     "names": [
       "British Virgin Islands",
       "BVI"
-    ]
+    ],
+    "population": 35802,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 151,
+    "peak_elevation": 521,
+    "capital": "Road Town"
   },
   "brunei": {
     "names": [
       "Brunei",
       "Brunei Darussalam",
       "Negara Brunei Darussalam"
-    ]
+    ],
+    "population": 450565,
+    "region": "Southeast Asia",
+    "landlocked": false,
+    "land_area": 5265,
+    "peak_elevation": 1850,
+    "capital": "Bandar Seri Begawan"
   },
   "bulgaria": {
     "names": [
       "Bulgaria",
       "Republic of Bulgaria",
       "Republika Bulgaria"
-    ]
+    ],
+    "population": 7057504,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 108489,
+    "peak_elevation": 2925,
+    "capital": "Sofia"
   },
   "burkina_faso": {
     "names": [
       "Burkina Faso"
-    ]
+    ],
+    "population": 19742715,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 273800,
+    "peak_elevation": 749,
+    "capital": "Ouagadougou"
   },
   "burma": {
     "names": [
@@ -224,22 +412,41 @@
       "Pyidaungzu Thammada Myanma Naingngandaw",
       "Myanma Naingngandaw",
       "Myanmar"
-    ]
+    ],
+    "population": 55622506,
+    "region": "Southeast Asia",
+    "landlocked": false,
+    "land_area": 653508,
+    "peak_elevation": 5870,
+    "capital": "Rangoon (Yangon); note - Nay Pyi Taw is the administrative capital"
   },
   "burundi": {
     "names": [
       "Burundi",
       "Republic of Burundi",
       "Republique du Burundi",
+      "/",
       "Republika y'u Burundi"
-    ]
+    ],
+    "population": 11844520,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 25680,
+    "peak_elevation": 2670,
+    "capital": "Bujumbura"
   },
   "cabo_verde": {
     "names": [
       "Cabo Verde",
       "Republic of Cabo Verde",
       "Republica de Cabo Verde"
-    ]
+    ],
+    "population": 568373,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 4033,
+    "peak_elevation": 2829,
+    "capital": "Praia"
   },
   "cambodia": {
     "names": [
@@ -247,49 +454,93 @@
       "Kingdom of Cambodia",
       "Preahreacheanachakr Kampuchea",
       "Kampuchea"
-    ]
+    ],
+    "population": 16449519,
+    "region": "Southeast Asia",
+    "landlocked": false,
+    "land_area": 176515,
+    "peak_elevation": 1810,
+    "capital": "Phnom Penh"
   },
   "cameroon": {
     "names": [
       "Cameroon",
       "Republic of Cameroon",
       "Republique du Cameroun",
+      "/",
       "Cameroun"
-    ]
+    ],
+    "population": 25640965,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 472710,
+    "peak_elevation": 4045,
+    "capital": "Yaounde"
   },
   "canada": {
     "names": [
       "Canada"
-    ]
+    ],
+    "population": 35881659,
+    "region": "North America",
+    "landlocked": false,
+    "land_area": 9093507,
+    "peak_elevation": 5959,
+    "capital": "Ottawa"
   },
   "cayman_islands": {
     "names": [
       "Cayman Islands"
-    ]
+    ],
+    "population": 59613,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 264,
+    "peak_elevation": 1,
+    "capital": "George Town (on Grand Cayman)"
   },
   "central_african_republic": {
     "names": [
       "Central African Republic",
       "Republique Centrafricaine",
       "CAR"
-    ]
+    ],
+    "population": 5745062,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 622984,
+    "peak_elevation": 1410,
+    "capital": "Bangui"
   },
   "chad": {
     "names": [
       "Chad",
       "Republic of Chad",
       "Republique du Tchad",
+      "/",
       "Jumhuriyat Tshad",
       "Tchad",
       "Tshad"
-    ]
+    ],
+    "population": 15833116,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 1259200,
+    "peak_elevation": 3445,
+    "capital": "N'Djamena"
   },
   "chile": {
     "names": [
       "Chile",
       "Republic of Chile",
       "Republica de Chile"
-    ]
+    ],
+    "population": 17925262,
+    "region": "South America",
+    "landlocked": false,
+    "land_area": 743812,
+    "peak_elevation": 6880,
+    "capital": "Santiago; note - Valparaiso is the seat of the national legislature"
   },
   "china": {
     "names": [
@@ -298,14 +549,25 @@
       "Zhonghua Renmin Gongheguo",
       "Zhongguo",
       "PRC"
-    ]
+    ],
+    "population": 1384688986,
+    "region": "Asia",
+    "landlocked": false,
+    "land_area": 9326410,
+    "peak_elevation": 8848
   },
   "colombia": {
     "names": [
       "Colombia",
       "Republic of Colombia",
       "Republica de Colombia"
-    ]
+    ],
+    "population": 48168996,
+    "region": "South America",
+    "landlocked": false,
+    "land_area": 1038700,
+    "peak_elevation": 5730,
+    "capital": "Bogota"
   },
   "comoros": {
     "names": [
@@ -313,7 +575,13 @@
       "Union of the Comoros",
       "Udzima wa Komori",
       "Komori"
-    ]
+    ],
+    "population": 821164,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 2235,
+    "peak_elevation": 2360,
+    "capital": "Moroni"
   },
   "congo_democratic_republic_of_the": {
     "names": [
@@ -323,7 +591,13 @@
       "Republique Democratique du Congo",
       "RDC",
       "DRC"
-    ]
+    ],
+    "population": 85281024,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 2267048,
+    "peak_elevation": 5110,
+    "capital": "Kinshasa"
   },
   "congo_republic_of_the": {
     "names": [
@@ -331,14 +605,26 @@
       "Republic of the Congo",
       "Congo",
       "Republique du Congo"
-    ]
+    ],
+    "population": 5062021,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 341500,
+    "peak_elevation": 903,
+    "capital": "Brazzaville"
   },
   "costa_rica": {
     "names": [
       "Costa Rica",
       "Republic of Costa Rica",
       "Republica de Costa Rica"
-    ]
+    ],
+    "population": 4987142,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 51060,
+    "peak_elevation": 3819,
+    "capital": "San Jose"
   },
   "cote_d'_ivoire": {
     "names": [
@@ -346,7 +632,13 @@
       "Republic of Cote d'Ivoire",
       "Cote d'Ivoire",
       "Republique de Cote d'Ivoire"
-    ]
+    ],
+    "population": 26260582,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 318003,
+    "peak_elevation": 1752,
+    "capital": "Yamoussoukro (legislative capital), Abidjan (administrative capital); note - although Yamoussoukro has been the official capital since 1983, Abidjan remains the administrative capital as well as the officially designated commercial capital; the US, like other countries, maintains its Embassy in Abidjan"
   },
   "croatia": {
     "names": [
@@ -354,31 +646,43 @@
       "Republic of Croatia",
       "Republika Hrvatska",
       "Hrvatska"
-    ]
+    ],
+    "population": 4270480,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 55974,
+    "peak_elevation": 1831,
+    "capital": "Zagreb"
   },
   "cuba": {
     "names": [
       "Cuba",
       "Republic of Cuba",
       "Republica de Cuba"
-    ]
-  },
-  "curacao": {
-    "names": [
-      "Curacao",
-      "Land Curacao",
-      "Curacao"
-    ]
+    ],
+    "population": 11116396,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 109820,
+    "peak_elevation": 1974,
+    "capital": "Havana"
   },
   "cyprus": {
     "names": [
       "Cyprus",
       "Republic of Cyprus",
       "Kypriaki Dimokratia",
+      "/",
       "Kibris Cumhuriyeti",
       "Kypros",
       "Kibris"
-    ]
+    ],
+    "population": 1237088,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 9241,
+    "peak_elevation": 1951,
+    "capital": "Nicosia (Lefkosia/Lefkosa)"
   },
   "czechia": {
     "names": [
@@ -386,7 +690,13 @@
       "Czech Republic",
       "Ceska republika",
       "Cesko"
-    ]
+    ],
+    "population": 10686269,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 77247,
+    "peak_elevation": 1602,
+    "capital": "Prague"
   },
   "denmark": {
     "names": [
@@ -394,22 +704,41 @@
       "Kingdom of Denmark",
       "Kongeriget Danmark",
       "Danmark"
-    ]
+    ],
+    "population": 5809502,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 42434,
+    "peak_elevation": 171,
+    "capital": "Copenhagen"
   },
   "djibouti": {
     "names": [
       "Djibouti",
       "Republic of Djibouti",
       "Republique de Djibouti",
+      "/",
       "Jumhuriyat Jibuti",
       "Jibuti"
-    ]
+    ],
+    "population": 884017,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 23180,
+    "peak_elevation": 2021,
+    "capital": "Djibouti"
   },
   "dominica": {
     "names": [
       "Dominica",
       "Commonwealth of Dominica"
-    ]
+    ],
+    "population": 74027,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 751,
+    "peak_elevation": 1447,
+    "capital": "Roseau"
   },
   "dominican_republic": {
     "names": [
@@ -418,14 +747,26 @@
       "Dominican",
       "Republica Dominicana",
       "La Dominicana"
-    ]
+    ],
+    "population": 10298756,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 48320,
+    "peak_elevation": 3098,
+    "capital": "Santo Domingo"
   },
   "ecuador": {
     "names": [
       "Ecuador",
       "Republic of Ecuador",
       "Republica del Ecuador"
-    ]
+    ],
+    "population": 16498502,
+    "region": "South America",
+    "landlocked": false,
+    "land_area": 276841,
+    "peak_elevation": 6267,
+    "capital": "Quito"
   },
   "egypt": {
     "names": [
@@ -433,24 +774,43 @@
       "Arab Republic of Egypt",
       "Jumhuriyat Misr al-Arabiyah",
       "Misr"
-    ]
+    ],
+    "population": 99413317,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 995450,
+    "peak_elevation": 2629,
+    "capital": "Cairo"
   },
   "el_salvador": {
     "names": [
       "El Salvador",
       "Republic of El Salvador",
       "Republica de El Salvador"
-    ]
+    ],
+    "population": 6187271,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 20721,
+    "peak_elevation": 2730,
+    "capital": "San Salvador"
   },
   "equatorial_guinea": {
     "names": [
       "Equatorial Guinea",
       "Republic of Equatorial Guinea",
       "Republica de Guinea Ecuatorial",
+      "/",
       "Republique de Guinee Equatoriale",
       "Guinea Ecuatorial",
       "Guinee Equatoriale"
-    ]
+    ],
+    "population": 797457,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 28051,
+    "peak_elevation": 3008,
+    "capital": "Malabo; note - a new capital of Oyala is being built on the mainland near Djibloho; Malabo is on the island of Bioko"
   },
   "eritrea": {
     "names": [
@@ -458,7 +818,13 @@
       "State of Eritrea",
       "Hagere Ertra",
       "Ertra"
-    ]
+    ],
+    "population": 5970646,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 101000,
+    "peak_elevation": 3018,
+    "capital": "Asmara (Asmera)"
   },
   "estonia": {
     "names": [
@@ -466,14 +832,26 @@
       "Republic of Estonia",
       "Eesti Vabariik",
       "Eesti"
-    ]
+    ],
+    "population": 1244288,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 42388,
+    "peak_elevation": 318,
+    "capital": "Tallinn"
   },
   "eswatini": {
     "names": [
       "Eswatini",
       "Kingdom of Eswatini",
       "Umbuso weSwatini"
-    ]
+    ],
+    "population": 1087200,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 17204,
+    "peak_elevation": 1862,
+    "capital": "Mbabane (administrative capital); Lobamba (royal and legislative capital)"
   },
   "ethiopia": {
     "names": [
@@ -482,37 +860,69 @@
       "Ityop'iya Federalawi Demokrasiyawi Ripeblik",
       "Ityop'iya",
       "FDRE"
-    ]
+    ],
+    "population": 108386391,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 1096570,
+    "peak_elevation": 4550,
+    "capital": "Addis Ababa"
   },
   "faroe_islands": {
     "names": [
       "Faroe Islands",
       "Foroyar"
-    ]
+    ],
+    "population": 51018,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 1393,
+    "peak_elevation": 882,
+    "capital": "Torshavn"
   },
   "fiji": {
     "names": [
       "Fiji",
       "Republic of Fiji",
+      "/",
       "Matanitu ko Viti",
       "Viti"
-    ]
+    ],
+    "population": 926276,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 18274,
+    "peak_elevation": 1324,
+    "capital": "Suva (on Viti Levu)"
   },
   "finland": {
     "names": [
       "Finland",
       "Republic of Finland",
       "Suomen tasavalta",
+      "/",
       "Republiken Finland",
       "Suomi"
-    ]
+    ],
+    "population": 5537364,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 303815,
+    "peak_elevation": 1328,
+    "capital": "Helsinki"
   },
   "france": {
     "names": [
       "France",
       "French Republic",
       "Republique francaise"
-    ]
+    ],
+    "population": 67364357,
+    "region": "Europe;",
+    "landlocked": false,
+    "land_area": 640427,
+    "peak_elevation": 4810,
+    "capital": "Paris"
   },
   "french_polynesia": {
     "names": [
@@ -520,14 +930,26 @@
       "Overseas Lands of French Polynesia",
       "Pays d'outre-mer de la Polynesie Francaise",
       "Polynesie Francaise"
-    ]
+    ],
+    "population": 290373,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 3827,
+    "peak_elevation": 2241,
+    "capital": "Papeete (located on Tahiti)"
   },
   "gabon": {
     "names": [
       "Gabon",
       "Gabonese Republic",
       "Republique Gabonaise"
-    ]
+    ],
+    "population": 2119036,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 257667,
+    "peak_elevation": 1575,
+    "capital": "Libreville"
   },
   "gambia_the": {
     "names": [
@@ -535,19 +957,25 @@
       "Republic of The Gambia",
       "The Gambia",
       "Gambia"
-    ]
-  },
-  "gaza_strip": {
-    "names": [
-      "Gaza Strip",
-      "Qita' Ghazzah"
-    ]
+    ],
+    "population": 2092731,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 10120,
+    "peak_elevation": 53,
+    "capital": "Banjul"
   },
   "georgia": {
     "names": [
       "Georgia",
       "Sak'art'velo"
-    ]
+    ],
+    "population": 4926087,
+    "region": "Asia",
+    "landlocked": false,
+    "land_area": 69700,
+    "peak_elevation": 5193,
+    "capital": "Tbilisi"
   },
   "germany": {
     "names": [
@@ -555,57 +983,112 @@
       "Federal Republic of Germany",
       "Bundesrepublik Deutschland",
       "Deutschland"
-    ]
+    ],
+    "population": 80457737,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 348672,
+    "peak_elevation": 2963,
+    "capital": "Berlin"
   },
   "ghana": {
     "names": [
       "Ghana",
       "Republic of Ghana"
-    ]
+    ],
+    "population": 28102471,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 227533,
+    "peak_elevation": 885,
+    "capital": "Accra"
   },
   "gibraltar": {
     "names": [
       "Gibraltar"
-    ]
+    ],
+    "population": 29461,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 6.5,
+    "peak_elevation": 426,
+    "capital": "Gibraltar"
   },
   "greece": {
     "names": [
       "Greece",
       "Hellenic Republic",
       "Elliniki Dimokratia",
-      "Ellas or Ellada"
-    ]
+      "Ellas",
+      "Ellada"
+    ],
+    "population": 10761523,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 130647,
+    "peak_elevation": 2917,
+    "capital": "Athens"
   },
   "greenland": {
     "names": [
       "Greenland",
       "Kalaallit Nunaat"
-    ]
+    ],
+    "population": 57691,
+    "region": "Arctic Region",
+    "landlocked": false,
+    "land_area": 2166086,
+    "peak_elevation": 3694,
+    "capital": "Nuuk (Godthaab)"
   },
   "grenada": {
     "names": [
       "Grenada"
-    ]
+    ],
+    "population": 112207,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 344,
+    "peak_elevation": 840,
+    "capital": "Saint George's"
   },
   "guam": {
     "names": [
       "Guam",
       "Guahan",
       "GU"
-    ]
+    ],
+    "population": 167772,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 544,
+    "peak_elevation": 406,
+    "capital": "Hagatna (Agana)"
   },
   "guatemala": {
     "names": [
       "Guatemala",
       "Republic of Guatemala",
       "Republica de Guatemala"
-    ]
+    ],
+    "population": 16581273,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 107159,
+    "peak_elevation": 4220,
+    "capital": "Guatemala City"
   },
   "guernsey": {
     "names": [
       "Guernsey",
       "Bailiwick of Guernsey"
-    ]
+    ],
+    "population": 66697,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 78,
+    "peak_elevation": 114,
+    "capital": "Saint Peter Port"
   },
   "guinea": {
     "names": [
@@ -613,7 +1096,13 @@
       "Republic of Guinea",
       "Republique de Guinee",
       "Guinee"
-    ]
+    ],
+    "population": 11855411,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 245717,
+    "peak_elevation": 1752,
+    "capital": "Conakry"
   },
   "guinea_bissau": {
     "names": [
@@ -621,44 +1110,66 @@
       "Republic of Guinea-Bissau",
       "Republica da Guine-Bissau",
       "Guine-Bissau"
-    ]
+    ],
+    "population": 1833247,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 28120,
+    "peak_elevation": 300,
+    "capital": "Bissau"
   },
   "guyana": {
     "names": [
       "Guyana",
       "Cooperative Republic of Guyana"
-    ]
+    ],
+    "population": 740685,
+    "region": "South America",
+    "landlocked": false,
+    "land_area": 196849,
+    "peak_elevation": 2775,
+    "capital": "Georgetown"
   },
   "haiti": {
     "names": [
       "Haiti",
       "Republic of Haiti",
       "Republique d'Haiti",
+      "/",
       "Repiblik d Ayiti",
       "Ayiti"
-    ]
+    ],
+    "population": 10788440,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 27560,
+    "peak_elevation": 2680,
+    "capital": "Port-au-Prince"
   },
   "honduras": {
     "names": [
       "Honduras",
       "Republic of Honduras",
       "Republica de Honduras"
-    ]
-  },
-  "hong_kong": {
-    "names": [
-      "Hong Kong",
-      "Hong Kong Special Administrative Region",
-      "Heung Kong Takpit Hangching Ku",
-      "Heung Kong",
-      "HK"
-    ]
+    ],
+    "population": 9182766,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 111890,
+    "peak_elevation": 2870,
+    "capital": "Tegucigalpa"
   },
   "hungary": {
     "names": [
       "Hungary",
       "Magyarorszag"
-    ]
+    ],
+    "population": 9825704,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 89608,
+    "peak_elevation": 1014,
+    "capital": "Budapest"
   },
   "iceland": {
     "names": [
@@ -666,52 +1177,96 @@
       "Republic of Iceland",
       "Lydveldid Island",
       "Island"
-    ]
+    ],
+    "population": 343518,
+    "region": "Arctic Region",
+    "landlocked": false,
+    "land_area": 100250,
+    "peak_elevation": 2110,
+    "capital": "Reykjavik"
   },
   "india": {
     "names": [
       "India",
       "Republic of India",
+      "/",
       "Bharatiya Ganarajya",
       "Bharat"
-    ]
+    ],
+    "population": 1296834042,
+    "region": "Asia",
+    "landlocked": false,
+    "land_area": 2973193,
+    "peak_elevation": 8586,
+    "capital": "New Delhi"
   },
   "indonesia": {
     "names": [
       "Indonesia",
       "Republic of Indonesia",
       "Republik Indonesia"
-    ]
+    ],
+    "population": 262787403,
+    "region": "Southeast Asia",
+    "landlocked": false,
+    "land_area": 1811569,
+    "peak_elevation": 4884,
+    "capital": "Jakarta"
   },
   "iran": {
     "names": [
       "Iran",
       "Islamic Republic of Iran",
       "Jomhuri-ye Eslami-ye Iran"
-    ]
+    ],
+    "population": 83024745,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 1531595,
+    "peak_elevation": 5625,
+    "capital": "Tehran"
   },
   "iraq": {
     "names": [
       "Iraq",
       "Republic of Iraq",
       "Jumhuriyat al-Iraq",
+      "/",
       "Komar-i Eraq",
       "Al Iraq",
       "Eraq"
-    ]
+    ],
+    "population": 40194216,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 437367,
+    "peak_elevation": 3611,
+    "capital": "Baghdad"
   },
   "ireland": {
     "names": [
       "Ireland",
       "Eire"
-    ]
+    ],
+    "population": 5068050,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 68883,
+    "peak_elevation": 1041,
+    "capital": "Dublin"
   },
   "isle_of_man": {
     "names": [
       "Isle Of Man",
       "Isle of Man",
       "I.O.M."
-    ]
+    ],
+    "population": 89407,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 572,
+    "peak_elevation": 621,
+    "capital": "Douglas"
   },
   "israel": {
     "names": [
@@ -719,7 +1274,13 @@
       "State of Israel",
       "Medinat Yisra'el",
       "Yisra'el"
-    ]
+    ],
+    "population": 8424904,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 20330,
+    "peak_elevation": 1208,
+    "capital": "Jerusalem; note - the US recognized Jerusalem as Israel’s capital in December 2017 without taking a position on the specific boundaries of Israeli sovereignty"
   },
   "italy": {
     "names": [
@@ -727,27 +1288,52 @@
       "Italian Republic",
       "Repubblica Italiana",
       "Italia"
-    ]
+    ],
+    "population": 62246674,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 294140,
+    "peak_elevation": 4748,
+    "capital": "Rome"
   },
   "jamaica": {
     "names": [
       "Jamaica"
-    ]
+    ],
+    "population": 2812090,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 10831,
+    "peak_elevation": 2256,
+    "capital": "Kingston"
   },
   "japan": {
     "names": [
       "Japan",
       "Nihon-koku",
+      "/",
       "Nippon-koku",
       "Nihon",
       "Nippon"
-    ]
+    ],
+    "population": 126168156,
+    "region": "Asia",
+    "landlocked": false,
+    "land_area": 364485,
+    "peak_elevation": 3776,
+    "capital": "Tokyo"
   },
   "jersey": {
     "names": [
       "Jersey",
       "Bailiwick of Jersey"
-    ]
+    ],
+    "population": 99602,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 116,
+    "peak_elevation": 136,
+    "capital": "Saint Helier"
   },
   "jordan": {
     "names": [
@@ -755,7 +1341,13 @@
       "Hashemite Kingdom of Jordan",
       "Al Mamlakah al Urduniyah al Hashimiyah",
       "Al Urdun"
-    ]
+    ],
+    "population": 10458413,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 88802,
+    "peak_elevation": 1854,
+    "capital": "Amman"
   },
   "kazakhstan": {
     "names": [
@@ -763,20 +1355,39 @@
       "Republic of Kazakhstan",
       "Qazaqstan Respublikasy",
       "Qazaqstan"
-    ]
+    ],
+    "population": 18744548,
+    "region": "Asia",
+    "landlocked": true,
+    "land_area": 2699700,
+    "peak_elevation": 6995,
+    "capital": "Astana"
   },
   "kenya": {
     "names": [
       "Kenya",
       "Republic of Kenya",
+      "/",
       "Jamhuri ya Kenya"
-    ]
+    ],
+    "population": 48397527,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 569140,
+    "peak_elevation": 5199,
+    "capital": "Nairobi"
   },
   "kiribati": {
     "names": [
       "Kiribati",
       "Republic of Kiribati"
-    ]
+    ],
+    "population": 109367,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 811,
+    "peak_elevation": 81,
+    "capital": "Tarawa"
   },
   "korea_north": {
     "names": [
@@ -786,7 +1397,13 @@
       "Choson-minjujuui-inmin-konghwaguk",
       "Choson",
       "DPRK"
-    ]
+    ],
+    "population": 25381085,
+    "region": "Asia",
+    "landlocked": false,
+    "land_area": 120408,
+    "peak_elevation": 2744,
+    "capital": "Pyongyang"
   },
   "korea_south": {
     "names": [
@@ -796,7 +1413,13 @@
       "Taehan-min'guk",
       "Han'guk",
       "ROK"
-    ]
+    ],
+    "population": 51418097,
+    "region": "Asia",
+    "landlocked": false,
+    "land_area": 96920,
+    "peak_elevation": 1950,
+    "capital": "Seoul; note - Sejong, located some 120 km (75 mi) south of Seoul, is being developed as a new capital"
   },
   "kosovo": {
     "names": [
@@ -804,7 +1427,13 @@
       "Republic of Kosovo",
       "Republika e Kosoves",
       "Kosova"
-    ]
+    ],
+    "population": 1907592,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 10887,
+    "peak_elevation": 2656,
+    "capital": "Pristina (Prishtine, Prishtina)"
   },
   "kuwait": {
     "names": [
@@ -812,14 +1441,26 @@
       "State of Kuwait",
       "Dawlat al Kuwayt",
       "Al Kuwayt"
-    ]
+    ],
+    "population": 2916467,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 17818,
+    "peak_elevation": 3.6,
+    "capital": "Kuwait City"
   },
   "kyrgyzstan": {
     "names": [
       "Kyrgyzstan",
       "Kyrgyz Republic",
       "Kyrgyz Respublikasy"
-    ]
+    ],
+    "population": 5849296,
+    "region": "Asia",
+    "landlocked": true,
+    "land_area": 191801,
+    "peak_elevation": 7439,
+    "capital": "Bishkek"
   },
   "laos": {
     "names": [
@@ -827,7 +1468,13 @@
       "Lao People's Democratic Republic",
       "Sathalanalat Paxathipatai Paxaxon Lao",
       "Mueang Lao"
-    ]
+    ],
+    "population": 7234171,
+    "region": "Southeast Asia",
+    "landlocked": true,
+    "land_area": 230800,
+    "peak_elevation": 2817,
+    "capital": "Vientiane (Viangchan)"
   },
   "latvia": {
     "names": [
@@ -835,7 +1482,13 @@
       "Republic of Latvia",
       "Latvijas Republika",
       "Latvija"
-    ]
+    ],
+    "population": 1923559,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 62249,
+    "peak_elevation": 312,
+    "capital": "Riga"
   },
   "lebanon": {
     "names": [
@@ -843,19 +1496,37 @@
       "Lebanese Republic",
       "Al Jumhuriyah al Lubnaniyah",
       "Lubnan"
-    ]
+    ],
+    "population": 6100075,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 10230,
+    "peak_elevation": 3088,
+    "capital": "Beirut"
   },
   "lesotho": {
     "names": [
       "Lesotho",
       "Kingdom of Lesotho"
-    ]
+    ],
+    "population": 1962461,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 30355,
+    "peak_elevation": 3482,
+    "capital": "Maseru"
   },
   "liberia": {
     "names": [
       "Liberia",
       "Republic of Liberia"
-    ]
+    ],
+    "population": 4809768,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 96320,
+    "peak_elevation": 1447,
+    "capital": "Monrovia"
   },
   "libya": {
     "names": [
@@ -863,14 +1534,26 @@
       "State of Libya",
       "Dawiat Libiya",
       "Libiya"
-    ]
+    ],
+    "population": 6754507,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 1759540,
+    "peak_elevation": 2267,
+    "capital": "Tripoli (Tarabulus)"
   },
   "liechtenstein": {
     "names": [
       "Liechtenstein",
       "Principality of Liechtenstein",
       "Fuerstentum Liechtenstein"
-    ]
+    ],
+    "population": 38547,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 160,
+    "peak_elevation": 2599,
+    "capital": "Vaduz"
   },
   "lithuania": {
     "names": [
@@ -878,43 +1561,66 @@
       "Republic of Lithuania",
       "Lietuvos Respublika",
       "Lietuva"
-    ]
+    ],
+    "population": 2793284,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 62680,
+    "peak_elevation": 294,
+    "capital": "Vilnius"
   },
   "luxembourg": {
     "names": [
       "Luxembourg",
       "Grand Duchy of Luxembourg",
       "Grand Duche de Luxembourg"
-    ]
-  },
-  "macau": {
-    "names": [
-      "Macau",
-      "Macau Special Administrative Region",
-      "Aomen Tebie Xingzhengqu",
-      "Aomen"
-    ]
+    ],
+    "population": 605764,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 2586,
+    "peak_elevation": 559,
+    "capital": "Luxembourg"
   },
   "madagascar": {
     "names": [
       "Madagascar",
       "Republic of Madagascar",
       "Republique de Madagascar",
+      "/",
       "Repoblikan'i Madagasikara",
       "Madagasikara"
-    ]
+    ],
+    "population": 25683610,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 581540,
+    "peak_elevation": 2876,
+    "capital": "Antananarivo"
   },
   "malawi": {
     "names": [
       "Malawi",
       "Republic of Malawi",
       "Dziko la Malawi"
-    ]
+    ],
+    "population": 19842560,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 94080,
+    "peak_elevation": 3002,
+    "capital": "Lilongwe"
   },
   "malaysia": {
     "names": [
       "Malaysia"
-    ]
+    ],
+    "population": 31809660,
+    "region": "Southeast Asia",
+    "landlocked": false,
+    "land_area": 328657,
+    "peak_elevation": 4095,
+    "capital": "Kuala Lumpur; note - nearby Putrajaya is referred to as a federal government administrative center but not the capital; Parliament meets in Kuala Lumpur"
   },
   "maldives": {
     "names": [
@@ -922,28 +1628,52 @@
       "Republic of Maldives",
       "Dhivehi Raajjeyge Jumhooriyyaa",
       "Dhivehi Raajje"
-    ]
+    ],
+    "population": 392473,
+    "region": "Asia",
+    "landlocked": false,
+    "land_area": 298,
+    "peak_elevation": 5,
+    "capital": "Male"
   },
   "mali": {
     "names": [
       "Mali",
       "Republic of Mali",
       "Republique de Mali"
-    ]
+    ],
+    "population": 18429893,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 1220190,
+    "peak_elevation": 1155,
+    "capital": "Bamako"
   },
   "malta": {
     "names": [
       "Malta",
       "Republic of Malta",
       "Repubblika ta' Malta"
-    ]
+    ],
+    "population": 449043,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 316,
+    "peak_elevation": 253,
+    "capital": "Valletta"
   },
   "marshall_islands": {
     "names": [
       "Marshall Islands",
       "Republic of the Marshall Islands",
       "RMI"
-    ]
+    ],
+    "population": 75684,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 181,
+    "peak_elevation": 14,
+    "capital": "Majuro; note - the capital is an atoll of 64 islands; governmental buildings are housed on three fused islands: Djarrit, Uliga, and Delap"
   },
   "mauritania": {
     "names": [
@@ -951,53 +1681,101 @@
       "Islamic Republic of Mauritania",
       "Al Jumhuriyah al Islamiyah al Muritaniyah",
       "Muritaniyah"
-    ]
+    ],
+    "population": 3840429,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 1030700,
+    "peak_elevation": 915,
+    "capital": "Nouakchott"
   },
   "mauritius": {
     "names": [
       "Mauritius",
       "Republic of Mauritius"
-    ]
+    ],
+    "population": 1364283,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 2030,
+    "peak_elevation": 828,
+    "capital": "Port Louis"
   },
   "mexico": {
     "names": [
       "Mexico",
       "United Mexican States",
       "Estados Unidos Mexicanos"
-    ]
+    ],
+    "population": 125959205,
+    "region": "North America",
+    "landlocked": false,
+    "land_area": 1943945,
+    "peak_elevation": 5636,
+    "capital": "Mexico City (Ciudad de Mexico)"
   },
   "micronesia_federated_states_of": {
     "names": [
       "Micronesia, Federated States Of",
       "Federated States of Micronesia",
       "FSM"
-    ]
+    ],
+    "population": 103643,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 702,
+    "peak_elevation": 782,
+    "capital": "Palikir"
   },
   "moldova": {
     "names": [
       "Moldova",
       "Republic of Moldova",
       "Republica Moldova"
-    ]
+    ],
+    "population": 3437720,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 32891,
+    "peak_elevation": 430,
+    "capital": "Chisinau in Romanian (Kishinev in Russian)"
   },
   "monaco": {
     "names": [
       "Monaco",
       "Principality of Monaco",
       "Principaute de Monaco"
-    ]
+    ],
+    "population": 30727,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 2,
+    "peak_elevation": 162,
+    "capital": "Monaco"
   },
   "mongolia": {
     "names": [
       "Mongolia",
       "Mongol Uls"
-    ]
+    ],
+    "population": 3103428,
+    "region": "Asia",
+    "landlocked": true,
+    "land_area": 1553556,
+    "peak_elevation": 4374,
+    "capital": "Ulaanbaatar"
   },
   "montenegro": {
     "names": [
       "Montenegro",
       "Crna Gora"
-    ]
+    ],
+    "population": 614249,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 13452,
+    "peak_elevation": 2522,
+    "capital": "Podgorica; note - Cetinje retains the status of \"Old Royal Capital\""
   },
   "morocco": {
     "names": [
@@ -1005,7 +1783,13 @@
       "Kingdom of Morocco",
       "Al Mamlakah al Maghribiyah",
       "Al Maghrib"
-    ]
+    ],
+    "population": 34314130,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 446300,
+    "peak_elevation": 4165,
+    "capital": "Rabat"
   },
   "mozambique": {
     "names": [
@@ -1013,20 +1797,38 @@
       "Republic of Mozambique",
       "Republica de Mocambique",
       "Mocambique"
-    ]
+    ],
+    "population": 27233789,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 786380,
+    "peak_elevation": 2436,
+    "capital": "Maputo"
   },
   "namibia": {
     "names": [
       "Namibia",
       "Republic of Namibia"
-    ]
+    ],
+    "population": 2533224,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 823290,
+    "peak_elevation": 2573,
+    "capital": "Windhoek"
   },
   "nepal": {
     "names": [
       "Nepal",
       "Federal Democratic Republic of Nepal",
       "Sanghiya Loktantrik Ganatantra Nepal"
-    ]
+    ],
+    "population": 29717587,
+    "region": "Asia",
+    "landlocked": true,
+    "land_area": 143351,
+    "peak_elevation": 8848,
+    "capital": "Kathmandu"
   },
   "netherlands": {
     "names": [
@@ -1035,7 +1837,13 @@
       "Koninkrijk der Nederlanden",
       "Nederland",
       "NL"
-    ]
+    ],
+    "population": 17151228,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 33893,
+    "peak_elevation": 862,
+    "capital": "Amsterdam; note - The Hague is the seat of government"
   },
   "new_caledonia": {
     "names": [
@@ -1043,33 +1851,63 @@
       "Territory of New Caledonia and Dependencies",
       "Territoire des Nouvelle-Caledonie et Dependances",
       "Nouvelle-Caledonie"
-    ]
+    ],
+    "population": 282754,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 18275,
+    "peak_elevation": 1628,
+    "capital": "Noumea"
   },
   "new_zealand": {
     "names": [
       "New Zealand",
       "NZ"
-    ]
+    ],
+    "population": 4545627,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 264537,
+    "peak_elevation": 3724,
+    "capital": "Wellington"
   },
   "nicaragua": {
     "names": [
       "Nicaragua",
       "Republic of Nicaragua",
       "Republica de Nicaragua"
-    ]
+    ],
+    "population": 6085213,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 119990,
+    "peak_elevation": 2085,
+    "capital": "Managua"
   },
   "niger": {
     "names": [
       "Niger",
       "Republic of Niger",
       "Republique du Niger"
-    ]
+    ],
+    "population": 19866231,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 1266700,
+    "peak_elevation": 2022,
+    "capital": "Niamey"
   },
   "nigeria": {
     "names": [
       "Nigeria",
       "Federal Republic of Nigeria"
-    ]
+    ],
+    "population": 203452505,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 910768,
+    "peak_elevation": 2419,
+    "capital": "Abuja"
   },
   "north_macedonia": {
     "names": [
@@ -1077,14 +1915,26 @@
       "Republic of North Macedonia",
       "Republika Severna Makedonija",
       "Severna Makedonija"
-    ]
+    ],
+    "population": 2118945,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 25433,
+    "peak_elevation": 2764,
+    "capital": "Skopje"
   },
   "northern_mariana_islands": {
     "names": [
       "Northern Mariana Islands",
       "Commonwealth of the Northern Mariana Islands",
       "CNMI"
-    ]
+    ],
+    "population": 51994,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 464,
+    "peak_elevation": 965,
+    "capital": "Saipan"
   },
   "norway": {
     "names": [
@@ -1092,7 +1942,13 @@
       "Kingdom of Norway",
       "Kongeriket Norge",
       "Norge"
-    ]
+    ],
+    "population": 5372191,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 304282,
+    "peak_elevation": 2469,
+    "capital": "Oslo"
   },
   "oman": {
     "names": [
@@ -1100,21 +1956,39 @@
       "Sultanate of Oman",
       "Saltanat Uman",
       "Uman"
-    ]
+    ],
+    "population": 3494116,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 309500,
+    "peak_elevation": 3004,
+    "capital": "Muscat"
   },
   "pakistan": {
     "names": [
       "Pakistan",
       "Islamic Republic of Pakistan",
       "Jamhuryat Islami Pakistan"
-    ]
+    ],
+    "population": 207862518,
+    "region": "Asia",
+    "landlocked": false,
+    "land_area": 770875,
+    "peak_elevation": 8611,
+    "capital": "Islamabad"
   },
   "panama": {
     "names": [
       "Panama",
       "Republic of Panama",
       "Republica de Panama"
-    ]
+    ],
+    "population": 3800644,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 74340,
+    "peak_elevation": 3475,
+    "capital": "Panama City"
   },
   "papua_new_guinea": {
     "names": [
@@ -1122,21 +1996,39 @@
       "Independent State of Papua New Guinea",
       "Papuaniugini",
       "PNG"
-    ]
+    ],
+    "population": 7027332,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 452860,
+    "peak_elevation": 4509,
+    "capital": "Port Moresby"
   },
   "paraguay": {
     "names": [
       "Paraguay",
       "Republic of Paraguay",
       "Republica del Paraguay"
-    ]
+    ],
+    "population": 7025763,
+    "region": "South America",
+    "landlocked": true,
+    "land_area": 397302,
+    "peak_elevation": 842,
+    "capital": "Asuncion"
   },
   "peru": {
     "names": [
       "Peru",
       "Republic of Peru",
       "Republica del Peru"
-    ]
+    ],
+    "population": 31331228,
+    "region": "South America",
+    "landlocked": false,
+    "land_area": 1279996,
+    "peak_elevation": 6746,
+    "capital": "Lima"
   },
   "philippines": {
     "names": [
@@ -1144,7 +2036,13 @@
       "Republic of the Philippines",
       "Republika ng Pilipinas",
       "Pilipinas"
-    ]
+    ],
+    "population": 105893381,
+    "region": "Southeast Asia",
+    "landlocked": false,
+    "land_area": 298170,
+    "peak_elevation": 2954,
+    "capital": "Manila"
   },
   "poland": {
     "names": [
@@ -1152,33 +2050,63 @@
       "Republic of Poland",
       "Rzeczpospolita Polska",
       "Polska"
-    ]
+    ],
+    "population": 38420687,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 304255,
+    "peak_elevation": 2499,
+    "capital": "Warsaw"
   },
   "portugal": {
     "names": [
       "Portugal",
       "Portuguese Republic",
       "Republica Portuguesa"
-    ]
+    ],
+    "population": 10355493,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 91470,
+    "peak_elevation": 2351,
+    "capital": "Lisbon"
   },
   "puerto_rico": {
     "names": [
       "Puerto Rico",
       "Commonwealth of Puerto Rico",
       "PR"
-    ]
+    ],
+    "population": 3294626,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 8959,
+    "peak_elevation": 1338,
+    "capital": "San Juan"
   },
   "qatar": {
     "names": [
       "Qatar",
       "State of Qatar",
       "Dawlat Qatar"
-    ]
+    ],
+    "population": 2363569,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 11586,
+    "peak_elevation": 103,
+    "capital": "Doha"
   },
   "romania": {
     "names": [
       "Romania"
-    ]
+    ],
+    "population": 21457116,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 229891,
+    "peak_elevation": 2544,
+    "capital": "Bucharest"
   },
   "russia": {
     "names": [
@@ -1186,26 +2114,50 @@
       "Russian Federation",
       "Rossiyskaya Federatsiya",
       "Rossiya"
-    ]
+    ],
+    "population": 142122776,
+    "region": "Asia",
+    "landlocked": false,
+    "land_area": 16377742,
+    "peak_elevation": 5642,
+    "capital": "Moscow"
   },
   "rwanda": {
     "names": [
       "Rwanda",
       "Republic of Rwanda",
       "Republika y'u Rwanda"
-    ]
+    ],
+    "population": 12187400,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 24668,
+    "peak_elevation": 4519,
+    "capital": "Kigali"
   },
   "saint_kitts_and_nevis": {
     "names": [
       "Saint Kitts And Nevis",
       "Federation of Saint Kitts and Nevis",
       "Saint Kitts and Nevis"
-    ]
+    ],
+    "population": 53094,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 261,
+    "peak_elevation": 1156,
+    "capital": "Basseterre"
   },
   "saint_lucia": {
     "names": [
       "Saint Lucia"
-    ]
+    ],
+    "population": 165510,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 606,
+    "peak_elevation": 948,
+    "capital": "Castries"
   },
   "saint_martin": {
     "names": [
@@ -1213,27 +2165,51 @@
       "Overseas Collectivity of Saint Martin",
       "Collectivite d'outre mer de Saint-Martin",
       "Saint-Martin"
-    ]
+    ],
+    "population": 32284,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 54.4,
+    "peak_elevation": 424,
+    "capital": "Marigot"
   },
   "saint_vincent_and_the_grenadines": {
     "names": [
       "Saint Vincent And The Grenadines",
       "Saint Vincent and the Grenadines"
-    ]
+    ],
+    "population": 101844,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 389,
+    "peak_elevation": 1234,
+    "capital": "Kingstown"
   },
   "samoa": {
     "names": [
       "Samoa",
       "Independent State of Samoa",
       "Malo Sa'oloto Tuto'atasi o Samoa"
-    ]
+    ],
+    "population": 201316,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 2821,
+    "peak_elevation": 1857,
+    "capital": "Apia"
   },
   "san_marino": {
     "names": [
       "San Marino",
       "Republic of San Marino",
       "Repubblica di San Marino"
-    ]
+    ],
+    "population": 33779,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 61,
+    "peak_elevation": 739,
+    "capital": "San Marino (city)"
   },
   "sao_tome_and_principe": {
     "names": [
@@ -1242,7 +2218,13 @@
       "Sao Tome and Principe",
       "Republica Democratica de Sao Tome e Principe",
       "Sao Tome e Principe"
-    ]
+    ],
+    "population": 204454,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 964,
+    "peak_elevation": 2024,
+    "capital": "Sao Tome"
   },
   "saudi_arabia": {
     "names": [
@@ -1250,14 +2232,26 @@
       "Kingdom of Saudi Arabia",
       "Al Mamlakah al Arabiyah as Suudiyah",
       "Al Arabiyah as Suudiyah"
-    ]
+    ],
+    "population": 33091113,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 2149690,
+    "peak_elevation": 3133,
+    "capital": "Riyadh"
   },
   "senegal": {
     "names": [
       "Senegal",
       "Republic of Senegal",
       "Republique du Senegal"
-    ]
+    ],
+    "population": 15020945,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 192530,
+    "peak_elevation": 2.8,
+    "capital": "Dakar"
   },
   "serbia": {
     "names": [
@@ -1265,32 +2259,49 @@
       "Republic of Serbia",
       "Republika Srbija",
       "Srbija"
-    ]
+    ],
+    "population": 7078110,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 77474,
+    "peak_elevation": 2169,
+    "capital": "Belgrade (Beograd)"
   },
   "seychelles": {
     "names": [
       "Seychelles",
       "Republic of Seychelles"
-    ]
+    ],
+    "population": 94633,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 455,
+    "peak_elevation": 905,
+    "capital": "Victoria"
   },
   "sierra_leone": {
     "names": [
       "Sierra Leone",
       "Republic of Sierra Leone"
-    ]
+    ],
+    "population": 6312212,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 71620,
+    "peak_elevation": 1948,
+    "capital": "Freetown"
   },
   "singapore": {
     "names": [
       "Singapore",
       "Republic of Singapore"
-    ]
-  },
-  "sint_maarten": {
-    "names": [
-      "Sint Maarten",
-      "Land Sint Maarten",
-      "Sint Maarten"
-    ]
+    ],
+    "population": 5995991,
+    "region": "Southeast Asia",
+    "landlocked": false,
+    "land_area": 709.2,
+    "peak_elevation": 166,
+    "capital": "Singapore"
   },
   "slovakia": {
     "names": [
@@ -1298,7 +2309,13 @@
       "Slovak Republic",
       "Slovenska republika",
       "Slovensko"
-    ]
+    ],
+    "population": 5445040,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 48105,
+    "peak_elevation": 2655,
+    "capital": "Bratislava"
   },
   "slovenia": {
     "names": [
@@ -1306,12 +2323,24 @@
       "Republic of Slovenia",
       "Republika Slovenija",
       "Slovenija"
-    ]
+    ],
+    "population": 2102126,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 20151,
+    "peak_elevation": 2864,
+    "capital": "Ljubljana"
   },
   "solomon_islands": {
     "names": [
       "Solomon Islands"
-    ]
+    ],
+    "population": 660121,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 27986,
+    "peak_elevation": 2335,
+    "capital": "Honiara"
   },
   "somalia": {
     "names": [
@@ -1319,20 +2348,38 @@
       "Federal Republic of Somalia",
       "Jamhuuriyadda Federaalkaa Soomaaliya",
       "Soomaaliya"
-    ]
+    ],
+    "population": 11259029,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 627337,
+    "peak_elevation": 2416,
+    "capital": "Mogadishu"
   },
   "south_africa": {
     "names": [
       "South Africa",
       "Republic of South Africa",
       "RSA"
-    ]
+    ],
+    "population": 55380210,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 1214470,
+    "peak_elevation": 3408,
+    "capital": "Pretoria (administrative capital); Cape Town (legislative capital); Bloemfontein (judicial capital)"
   },
   "south_sudan": {
     "names": [
       "South Sudan",
       "Republic of South Sudan"
-    ]
+    ],
+    "population": 10204581,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 644329,
+    "peak_elevation": 3187,
+    "capital": "Juba"
   },
   "spain": {
     "names": [
@@ -1340,17 +2387,30 @@
       "Kingdom of Spain",
       "Reino de Espana",
       "Espana"
-    ]
+    ],
+    "population": 49331076,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 498980,
+    "peak_elevation": 3718,
+    "capital": "Madrid"
   },
   "sri_lanka": {
     "names": [
       "Sri Lanka",
       "Democratic Socialist Republic of Sri Lanka",
       "Shri Lanka Prajatantrika Samajavadi Janarajaya",
+      "/",
       "Ilankai Jananayaka Choshalichak Kutiyarachu",
       "Shri Lanka",
       "Ilankai"
-    ]
+    ],
+    "population": 22576592,
+    "region": "Asia",
+    "landlocked": false,
+    "land_area": 64630,
+    "peak_elevation": 2524,
+    "capital": "Colombo (commercial capital); Sri Jayewardenepura Kotte (legislative capital)"
   },
   "sudan": {
     "names": [
@@ -1358,14 +2418,26 @@
       "Republic of the Sudan",
       "Jumhuriyat as-Sudan",
       "As-Sudan"
-    ]
+    ],
+    "population": 43120843,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 1861484,
+    "peak_elevation": 3042,
+    "capital": "Khartoum"
   },
   "suriname": {
     "names": [
       "Suriname",
       "Republic of Suriname",
       "Republiek Suriname"
-    ]
+    ],
+    "population": 597927,
+    "region": "South America",
+    "landlocked": false,
+    "land_area": 156000,
+    "peak_elevation": 1230,
+    "capital": "Paramaribo"
   },
   "sweden": {
     "names": [
@@ -1373,7 +2445,13 @@
       "Kingdom of Sweden",
       "Konungariket Sverige",
       "Sverige"
-    ]
+    ],
+    "population": 10040995,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 410335,
+    "peak_elevation": 2111,
+    "capital": "Stockholm"
   },
   "switzerland": {
     "names": [
@@ -1382,7 +2460,13 @@
       "Schweizerische Eidgenossenschaft",
       "Schweiz",
       "CH"
-    ]
+    ],
+    "population": 8292809,
+    "region": "Europe",
+    "landlocked": true,
+    "land_area": 39997,
+    "peak_elevation": 4634,
+    "capital": "Bern"
   },
   "syria": {
     "names": [
@@ -1390,12 +2474,24 @@
       "Syrian Arab Republic",
       "Al Jumhuriyah al Arabiyah as Suriyah",
       "Suriyah"
-    ]
+    ],
+    "population": 19454263,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 183630,
+    "peak_elevation": 2814,
+    "capital": "Damascus"
   },
   "taiwan": {
     "names": [
       "Taiwan"
-    ]
+    ],
+    "population": 23545963,
+    "region": "Southeast Asia",
+    "landlocked": false,
+    "land_area": 32260,
+    "peak_elevation": 3952,
+    "capital": "Taipei"
   },
   "tajikistan": {
     "names": [
@@ -1403,14 +2499,26 @@
       "Republic of Tajikistan",
       "Jumhurii Tojikiston",
       "Tojikiston"
-    ]
+    ],
+    "population": 8604882,
+    "region": "Asia",
+    "landlocked": true,
+    "land_area": 141510,
+    "peak_elevation": 7495,
+    "capital": "Dushanbe"
   },
   "tanzania": {
     "names": [
       "Tanzania",
       "United Republic of Tanzania",
       "Jamhuri ya Muungano wa Tanzania"
-    ]
+    ],
+    "population": 55451343,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 885800,
+    "peak_elevation": 5895,
+    "capital": "Dodoma (legislative capital), Dar es Salaam (administrative capital); note - Dodoma was designated the national capital in 1996 and serves as the meeting place for the National Assembly; Dar es Salaam remains the de facto capital, the country's largest city and commercial center, and the site of the executive branch offices and diplomatic representation; the government contends that it will complete the transfer of the executive branch to Dodoma by 2020"
   },
   "thailand": {
     "names": [
@@ -1418,7 +2526,13 @@
       "Kingdom of Thailand",
       "Ratcha Anachak Thai",
       "Prathet Thai"
-    ]
+    ],
+    "population": 68615858,
+    "region": "Southeast Asia",
+    "landlocked": false,
+    "land_area": 510890,
+    "peak_elevation": 2565,
+    "capital": "Bangkok"
   },
   "timor_leste": {
     "names": [
@@ -1426,28 +2540,52 @@
       "Democratic Republic of Timor-Leste",
       "Republika Demokratika Timor Lorosa'e [Tetum]",
       "Timor Lorosa'e [Tetum]"
-    ]
+    ],
+    "population": 1321929,
+    "region": "Southeast Asia",
+    "landlocked": false,
+    "land_area": 14874,
+    "peak_elevation": 2963,
+    "capital": "Dili"
   },
   "togo": {
     "names": [
       "Togo",
       "Togolese Republic",
       "Republique Togolaise"
-    ]
+    ],
+    "population": 8176449,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 54385,
+    "peak_elevation": 986,
+    "capital": "Lome"
   },
   "tonga": {
     "names": [
       "Tonga",
       "Kingdom of Tonga",
       "Pule'anga Fakatu'i 'o Tonga"
-    ]
+    ],
+    "population": 106398,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 717,
+    "peak_elevation": 1046,
+    "capital": "Nuku'alofa"
   },
   "trinidad_and_tobago": {
     "names": [
       "Trinidad And Tobago",
       "Republic of Trinidad and Tobago",
       "Trinidad and Tobago"
-    ]
+    ],
+    "population": 1215527,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 5128,
+    "peak_elevation": 940,
+    "capital": "Port of Spain"
   },
   "tunisia": {
     "names": [
@@ -1455,7 +2593,13 @@
       "Republic of Tunisia",
       "Al Jumhuriyah at Tunisiyah",
       "Tunis"
-    ]
+    ],
+    "population": 11516189,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 155360,
+    "peak_elevation": 1544,
+    "capital": "Tunis"
   },
   "turkey": {
     "names": [
@@ -1463,59 +2607,114 @@
       "Republic of Turkey",
       "Turkiye Cumhuriyeti",
       "Turkiye"
-    ]
+    ],
+    "population": 81257239,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 769632,
+    "peak_elevation": 5137,
+    "capital": "Ankara"
   },
   "turkmenistan": {
     "names": [
       "Turkmenistan"
-    ]
+    ],
+    "population": 5411012,
+    "region": "Asia",
+    "landlocked": true,
+    "land_area": 469930,
+    "peak_elevation": 3139,
+    "capital": "Ashgabat (Ashkhabad)"
   },
   "turks_and_caicos_islands": {
     "names": [
       "Turks And Caicos Islands",
       "Turks and Caicos Islands",
       "TCI"
-    ]
+    ],
+    "population": 53701,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 948,
+    "peak_elevation": 48,
+    "capital": "Grand Turk (Cockburn Town)"
   },
   "uganda": {
     "names": [
       "Uganda",
       "Republic of Uganda"
-    ]
+    ],
+    "population": 40853749,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 197100,
+    "peak_elevation": 5110,
+    "capital": "Kampala"
   },
   "ukraine": {
     "names": [
       "Ukraine",
       "Ukrayina"
-    ]
+    ],
+    "population": 43952299,
+    "region": "AsiaEurope",
+    "landlocked": false,
+    "land_area": 579330,
+    "peak_elevation": 2061,
+    "capital": "Kyiv (Kiev)"
   },
   "united_arab_emirates": {
     "names": [
       "United Arab Emirates",
       "Al Imarat al Arabiyah al Muttahidah",
       "UAE"
-    ]
+    ],
+    "population": 9701315,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 83600,
+    "peak_elevation": 1527,
+    "capital": "Abu Dhabi"
   },
   "united_kingdom": {
     "names": [
       "United Kingdom",
       "United Kingdom of Great Britain and Northern Ireland",
       "UK"
-    ]
+    ],
+    "population": 65105246,
+    "region": "Europe",
+    "landlocked": false,
+    "land_area": 241930,
+    "peak_elevation": 1345,
+    "capital": "London"
   },
   "united_states": {
     "names": [
       "United States",
       "United States of America",
-      "US or USA"
-    ]
+      "US",
+      "USA"
+    ],
+    "population": 329256465,
+    "region": "North America",
+    "landlocked": false,
+    "land_area": 9147593,
+    "peak_elevation": 6190,
+    "capital": "Washington, DC"
   },
   "uruguay": {
     "names": [
       "Uruguay",
       "Oriental Republic of Uruguay",
       "Republica Oriental del Uruguay"
-    ]
+    ],
+    "population": 3369299,
+    "region": "South America",
+    "landlocked": false,
+    "land_area": 175015,
+    "peak_elevation": 514,
+    "capital": "Montevideo"
   },
   "uzbekistan": {
     "names": [
@@ -1523,21 +2722,39 @@
       "Republic of Uzbekistan",
       "O'zbekiston Respublikasi",
       "O'zbekiston"
-    ]
+    ],
+    "population": 30023709,
+    "region": "Asia",
+    "landlocked": true,
+    "land_area": 425400,
+    "peak_elevation": 4301,
+    "capital": "Tashkent (Toshkent)"
   },
   "vanuatu": {
     "names": [
       "Vanuatu",
       "Republic of Vanuatu",
       "Ripablik blong Vanuatu"
-    ]
+    ],
+    "population": 288037,
+    "region": "Oceania",
+    "landlocked": false,
+    "land_area": 12189,
+    "peak_elevation": 1877,
+    "capital": "Port-Vila (on Efate)"
   },
   "venezuela": {
     "names": [
       "Venezuela",
       "Bolivarian Republic of Venezuela",
       "Republica Bolivariana de Venezuela"
-    ]
+    ],
+    "population": 31689176,
+    "region": "South America",
+    "landlocked": false,
+    "land_area": 882050,
+    "peak_elevation": 4978,
+    "capital": "Caracas"
   },
   "vietnam": {
     "names": [
@@ -1546,23 +2763,35 @@
       "Cong Hoa Xa Hoi Chu Nghia Viet Nam",
       "Viet Nam",
       "SRV"
-    ]
+    ],
+    "population": 97040334,
+    "region": "Southeast Asia",
+    "landlocked": false,
+    "land_area": 310070,
+    "peak_elevation": 3144,
+    "capital": "Hanoi (Ha Noi)"
   },
   "virgin_islands": {
     "names": [
       "Virgin Islands",
       "VI"
-    ]
-  },
-  "west_bank": {
-    "names": [
-      "West Bank"
-    ]
+    ],
+    "population": 106977,
+    "region": "Central America and the Caribbean",
+    "landlocked": false,
+    "land_area": 346,
+    "peak_elevation": 474,
+    "capital": "Charlotte Amalie"
   },
   "western_sahara": {
     "names": [
       "Western Sahara"
-    ]
+    ],
+    "population": 619551,
+    "region": "Africa",
+    "landlocked": false,
+    "land_area": 266000,
+    "peak_elevation": 805
   },
   "yemen": {
     "names": [
@@ -1570,18 +2799,36 @@
       "Republic of Yemen",
       "Al Jumhuriyah al Yamaniyah",
       "Al Yaman"
-    ]
+    ],
+    "population": 28667230,
+    "region": "Middle East",
+    "landlocked": false,
+    "land_area": 527968,
+    "peak_elevation": 3666,
+    "capital": "Sanaa"
   },
   "zambia": {
     "names": [
       "Zambia",
       "Republic of Zambia"
-    ]
+    ],
+    "population": 16445079,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 743398,
+    "peak_elevation": 2301,
+    "capital": "Lusaka; note - a proposal to build a new capital city in Ngabwe was announced in May 2017"
   },
   "zimbabwe": {
     "names": [
       "Zimbabwe",
       "Republic of Zimbabwe"
-    ]
+    ],
+    "population": 14030368,
+    "region": "Africa",
+    "landlocked": true,
+    "land_area": 386847,
+    "peak_elevation": 2592,
+    "capital": "Harare"
   }
 }

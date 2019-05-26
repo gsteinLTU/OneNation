@@ -19,6 +19,20 @@ const validCountry = key => {
         return false;
     }
 
+    // Some have peak listed wrong
+    if (Object.keys(data['countries'][key]['data']['geography']).indexOf('elevation') === -1) {
+        return false;
+    }
+
+    if (Object.keys(data['countries'][key]['data']['geography']['elevation']).indexOf('highest_point') === -1) {
+        return false;
+    }
+
+    // Some territories that probably shouldn't be included
+    if (Object.keys(data['countries'][key]['data']['government']).indexOf('capital') === -1) {
+        return false;
+    }
+
     // Excluding some very small nations
     if (Number.parseInt(data['countries'][key]['data']['people']['population']['total']) < 25000) {
         return false;
@@ -65,8 +79,8 @@ for (let c of countries) {
             // Separate multi-name strings
             let tempNames;
 
-            if (name.indexOf('/') !== -1) {
-                tempNames = name.split('/');
+            if (name.indexOf('/') !== -1 || name.indexOf(' or ') !== -1) {
+                tempNames = name.split(/(\/| or )/g).filter(s => s !== ' or ');
             }
             else {
                 tempNames = [name];
@@ -88,6 +102,26 @@ for (let c of countries) {
         }
 
         minData[c]['names'] = names;
+
+
+        minData[c]['population'] = countryData['people']['population']['total'];
+        minData[c]['region'] = countryData['geography']['map_references'];
+        minData[c]['landlocked'] = countryData['geography']['coastline']['value'] == 0;
+
+        if (countryData['geography']['area']['land'] !== undefined) {
+            minData[c]['land_area'] = countryData['geography']['area']['land']['value'];
+        } else {
+            // Sudan/South Sudan had incorrect formatting, but it should be accurate enough
+            minData[c]['land_area'] = countryData['geography']['area']['total']['value'];
+        }
+
+        if (countryData['geography']['elevation']['highest_point'] instanceof Object) {
+            minData[c]['peak_elevation'] = countryData['geography']['elevation']['highest_point']['elevation']['value'];
+        } else {
+            // Data for Ecuador is formatted wrong
+            minData[c]['peak_elevation'] = Number.parseInt(countryData['geography']['elevation']['highest_point'].split(' ')[1].replace(',', ''));
+        }
+        minData[c]['capital'] = countryData['government']['capital']['name'];
     }
 }
 
