@@ -10,6 +10,29 @@ exports._pickCountry = () => {
     return possible[Math.floor(Math.random() * possible.length)];
 }
 
+_testStringClue = (string, clue) => {
+    if (clue.constraint.type === 'startsWith') {
+        return string.toLowerCase().startsWith(clue.constraint.value.toLowerCase());
+    }
+
+    if (clue.constraint.type === 'endsWith') {
+        return string.toLowerCase().endsWith(clue.constraint.value.toLowerCase());
+    }
+
+    if (clue.constraint.type === 'contains') {
+        return string.toLowerCase().indexOf(clue.constraint.value.toLowerCase()) !== -1;
+    }
+
+    return false;
+}
+
+_testNumericClue = (value, clue) => {
+    if (clue.constraint.type === '>') {
+        return value >= clue.constraint.value;
+    } else {
+        return value <= clue.constraint.value;
+    }
+}
 /**
  * Determine if a country matches a clue
  */
@@ -18,53 +41,19 @@ exports._matchClue = (country, clue) => {
 
     switch (clue.type) {
         case 'name':
-            if (clue.constraint.type === 'startsWith') {
-                return countryData.names[0].toLowerCase().startsWith(clue.constraint.value.toLowerCase());
-            }
-
-            if (clue.constraint.type === 'endsWith') {
-                return countryData.names[0].toLowerCase().endsWith(clue.constraint.value.toLowerCase());
-            }
-
-            if (clue.constraint.type === 'contains') {
-                return countryData.names[0].toLowerCase().indexOf(clue.constraint.value.toLowerCase()) !== -1;
-            }
-            break;
+            return _testStringClue(countryData.names[0], clue);
         case 'capitalname':
-            if (clue.constraint.type === 'startsWith') {
-                return countryData.capital.toLowerCase().startsWith(clue.constraint.value.toLowerCase());
-            }
-
-            if (clue.constraint.type === 'endsWith') {
-                return countryData.capital.toLowerCase().endsWith(clue.constraint.value.toLowerCase());
-            }
-
-            if (clue.constraint.type === 'contains') {
-                return countryData.capital.toLowerCase().indexOf(clue.constraint.value.toLowerCase()) !== -1;
-            }
-            break;
+            return _testStringClue(countryData.capital, clue);
         case 'population':
-            if (clue.constraint.type === '>') {
-                return countryData.population >= clue.constraint.value;
-            } else {
-                return countryData.population <= clue.constraint.value;
-            }
+            return _testNumericClue(countryData.population, clue);
         case 'landlocked':
             return countryData.landlocked === clue.constraint;
         case 'region':
             return clue.constraint.indexOf(countryData.region) !== -1;
         case 'peak_elevation':
-            if (clue.constraint.type === '>') {
-                return countryData.peak_elevation >= clue.constraint.value;
-            } else {
-                return countryData.peak_elevation <= clue.constraint.value;
-            }
+            return _testNumericClue(countryData.peak_elevation, clue);
         case 'land_area':
-            if (clue.constraint.type === '>') {
-                return countryData.land_area >= clue.constraint.value;
-            } else {
-                return countryData.land_area <= clue.constraint.value;
-            }
+            return _testNumericClue(countryData.land_area, clue);
     }
 
     return false;
