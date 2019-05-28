@@ -1,16 +1,22 @@
 const data = require('../data/factbook-min.json');
 
-const countriesList = Object.keys(data);
+const _countriesList = Object.keys(data);
+exports._countriesList = _countriesList;
 
 /**
  * Get a random country key for non-tiny countries
  */
 exports._pickCountry = () => {
-    const possible = countriesList.filter(c => data[c].population > 100000);
+    const possible = _countriesList.filter(c => data[c].population > 100000);
     return possible[Math.floor(Math.random() * possible.length)];
 }
 
-_testStringClue = (string, clue) => {
+/**
+ * Tests if a string matches a clue
+ * @param {String} string String to test 
+ * @param {Object} clue Clue to match
+ */
+function _testStringClue(string, clue) {
     if (clue.constraint.type === 'startsWith') {
         return string.toLowerCase().startsWith(clue.constraint.value.toLowerCase());
     }
@@ -23,16 +29,42 @@ _testStringClue = (string, clue) => {
         return string.toLowerCase().indexOf(clue.constraint.value.toLowerCase()) !== -1;
     }
 
+    if (clue.constraint.type === 'nocontains') {
+        return string.toLowerCase().indexOf(clue.constraint.value.toLowerCase()) === -1;
+    }
+
+    if (clue.constraint.type === 'length') {
+        return string.length === clue.constraint.value;
+    }
+
     return false;
 }
 
-_testNumericClue = (value, clue) => {
+/**
+ * Test if a value matches a clue
+ * @param {Number} value Number to compare to clue value
+ * @param {Object} clue Clue to match
+ */
+function _testNumericClue(value, clue) {
     if (clue.constraint.type === '>') {
         return value >= clue.constraint.value;
     } else {
         return value <= clue.constraint.value;
     }
 }
+
+/**
+ * List of clue types
+ */
+const _clueTypes = ['name',
+    'capitalname',
+    'population',
+    'landlocked',
+    'region',
+    'peak_elevation',
+    'land_area',
+];
+
 /**
  * Determine if a country matches a clue
  */
@@ -60,12 +92,25 @@ exports._matchClue = (country, clue) => {
 }
 
 /**
+ * Get countries remaining with clues
+ * @param {Array} existingClues 
+ */
+exports._getRemaingCountries = (existingClues) => {
+    return _countriesList.filter(c => existingClues.every(clue => exports._matchClue(c, clue)));
+};
+
+/**
  * Generate the next clue in the sequence
  */
 exports._generateClue = (country, existingClues) => {
     const countryData = data[country];
 
     const newClue = {};
+
+    // Get clue types that weren't used yet
+    const remainingTypes = _clueTypes.filter(type => existingClues.find(clue => clue.type === type) === undefined);
+
+    // Find countries that match all existing clues
 
 
 

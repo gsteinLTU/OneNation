@@ -1,7 +1,7 @@
-const { _matchClue } = require('../controllers/game');
+const { _matchClue, _getRemaingCountries, _countriesList } = require('../controllers/game');
 const { expect } = require('chai');
 
-describe('clue tests', () => {
+describe('clue matching tests', () => {
 
     it('should match Uganda for starts with U clue', () => {
         const testCountry = 'uganda';
@@ -45,6 +45,59 @@ describe('clue tests', () => {
         };
 
         expect(_matchClue(testCountry, testClue)).is.false;
+    });
+
+
+    it('should match Uganda for contains G clue', () => {
+        const testCountry = 'uganda';
+        const testClue = {
+            type: 'name', constraint: {
+                type: 'contains', value: 'G'
+            }
+        };
+
+        expect(_matchClue(testCountry, testClue)).is.true;
+    });
+
+    it('should not match Uganda for contains J clue', () => {
+        const testCountry = 'uganda';
+        const testClue = {
+            type: 'name', constraint: {
+                type: 'contains', value: 'J'
+            }
+        };
+
+        expect(_matchClue(testCountry, testClue)).is.false;
+    });
+
+    it('should match Uganda for length of 6 clue', () => {
+        const testCountry = 'uganda';
+        const testClue = {
+            type: 'name', constraint: {
+                type: 'length', value: 6
+            }
+        };
+
+        expect(_matchClue(testCountry, testClue)).is.true;
+    });
+
+    it('should not match Uganda for other length clues', () => {
+        const testCountry = 'uganda';
+
+        for (let i = 0; i < 10; i++) {
+            if (i === 6) {
+                continue;
+            }
+
+            const testClue = {
+                type: 'name', constraint: {
+                    type: 'length',
+                    value: i
+                }
+            };
+
+            expect(_matchClue(testCountry, testClue)).is.false;
+        }
     });
 
     it('should match Uganda for capital starts with K clue', () => {
@@ -147,3 +200,70 @@ describe('clue tests', () => {
 
 
 });
+
+describe('remaining countries tests', () => {
+    it('should return all countries remaining with no clues', () => {
+        expect(_getRemaingCountries([]).length).equals(_countriesList.length);
+    });
+
+    it('should return no countries remaining with impossible clues', () => {
+        expect(_getRemaingCountries([{
+            type: 'landlocked',
+            constraint: true
+        },
+        {
+            type: 'landlocked',
+            constraint: false
+        }
+        ]).length).equals(0);
+    });
+
+    it('should return correct number of countries remaining with one clue', () => {
+        expect(_getRemaingCountries([{
+            type: 'landlocked',
+            constraint: true
+        }]).length).equals(44);
+    });
+
+    it('should return correct result remaining with list of clues', () => {
+        const testResult = _getRemaingCountries(
+            [
+                {
+                    type: 'name',
+                    constraint: {
+                        type: 'nocontains',
+                        value: ' '
+                    }
+                },
+                {
+                    type: 'region',
+                    constraint: ['Europe', 'Asia', 'Middle East']
+                },
+                {
+                    type: 'population',
+                    constraint: {
+                        type: '<',
+                        value: 10000000
+                    }
+                },
+                {
+                    type: 'capitalname',
+                    constraint: {
+                        type: 'length',
+                        value: 6
+                    }
+                },
+                {
+                    type: 'land_area',
+                    constraint: {
+                        type: '>',
+                        value: 200000
+                    }
+                }
+            ]
+        );
+
+        expect(testResult.length).equals(1);
+        expect(testResult[0]).equals('oman');
+    });
+})
