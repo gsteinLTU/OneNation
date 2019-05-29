@@ -116,12 +116,77 @@ exports._getRemaingCountries = (existingClues, countries = null) => {
     return _countriesList.filter(c => existingClues.every(clue => exports._matchClue(c, clue)));
 };
 
+function _addNumericClues(possibleClues, countryData, type) {
+    let base = Math.pow(10, Math.floor(Math.log10(countryData[type])));
+
+    possibleClues.push({
+        type: type,
+        constraint: {
+            type: '<',
+            value: base * Math.ceil((countryData[type] * (Math.random() + 1.05)) / base)
+        }
+    });
+
+    possibleClues.push({
+        type: type,
+        constraint: {
+            type: '>',
+            value: base * Math.floor((countryData[type] * (Math.random() / 2.0 + 0.25)) / base)
+        }
+    });
+}
+
+
+function _addStringClues(possibleClues, value, type) {
+    possibleClues.push({
+        type: type,
+        constraint: {
+            type: 'startswith',
+            value: value[0]
+        }
+    });
+
+    possibleClues.push({
+        type: type,
+        constraint: {
+            type: 'endswith',
+            value: value[value.length - 1]
+        }
+    });
+
+    for (let i = 'A'; i <= 'Z'; i++) {
+        if (value.toUpperCase().indexOf(i) !== -1) {
+            possibleClues.push({
+                type: type,
+                constraint: {
+                    type: 'contains',
+                    value: i
+                }
+            });
+        } else {
+            possibleClues.push({
+                type: type,
+                constraint: {
+                    type: 'nocontains',
+                    value: i
+                }
+            });
+        }
+    }
+
+    possibleClues.push({
+        type: type,
+        constraint: {
+            type: 'length',
+            value: value.length
+        }
+    });
+}
 /**
  * Generate the next clue in the sequence
  */
 exports._generateClue = (country, existingClues) => {
     const countryData = data[country];
-    const countryName = countryData.names[0];
 
     // Get clue types that weren't used yet
     const remainingTypes = _clueTypes.filter(type => existingClues.find(clue => clue.type === type) === undefined);
@@ -137,95 +202,11 @@ exports._generateClue = (country, existingClues) => {
     const possibleClues = [];
 
     if (remainingTypes.indexOf('name') !== -1) {
-        possibleClues.push({
-            type: 'name',
-            constraint: {
-                type: 'startswith',
-                value: countryName[0]
-            }
-        });
-
-        possibleClues.push({
-            type: 'name',
-            constraint: {
-                type: 'endswith',
-                value: countryName[countryName.length - 1]
-            }
-        });
-
-        for (let i = 'A'; i <= 'Z'; i++) {
-            if (countryName.toUpperCase().indexOf(i) !== -1) {
-                possibleClues.push({
-                    type: 'name',
-                    constraint: {
-                        type: 'contains',
-                        value: i
-                    }
-                });
-            } else {
-                possibleClues.push({
-                    type: 'name',
-                    constraint: {
-                        type: 'nocontains',
-                        value: i
-                    }
-                });
-            }
-        }
-
-        possibleClues.push({
-            type: 'name',
-            constraint: {
-                type: 'length',
-                value: countryName.length
-            }
-        });
+        _addStringClues(possibleClues, countryData.names[0], 'name');
     }
 
     if (remainingTypes.indexOf('capitalname') !== -1) {
-        possibleClues.push({
-            type: 'capitalname',
-            constraint: {
-                type: 'startswith',
-                value: countryData.capital[0]
-            }
-        });
-
-        possibleClues.push({
-            type: 'capitalname',
-            constraint: {
-                type: 'endswith',
-                value: countryData.capital[countryData.capital.length - 1]
-            }
-        });
-
-        for (let i = 'A'; i <= 'Z'; i++) {
-            if (countryData.capital.toUpperCase().indexOf(i) !== -1) {
-                possibleClues.push({
-                    type: 'capitalname',
-                    constraint: {
-                        type: 'contains',
-                        value: i
-                    }
-                });
-            } else {
-                possibleClues.push({
-                    type: 'capitalname',
-                    constraint: {
-                        type: 'nocontains',
-                        value: i
-                    }
-                });
-            }
-        }
-
-        possibleClues.push({
-            type: 'capitalname',
-            constraint: {
-                type: 'length',
-                value: countryData.capital.length
-            }
-        });
+        _addStringClues(possibleClues, countryData.capital, 'capitalname');
     }
 
     if (remainingTypes.indexOf('landlocked') !== -1) {
@@ -236,63 +217,15 @@ exports._generateClue = (country, existingClues) => {
     }
 
     if (remainingTypes.indexOf('population') !== -1) {
-        let base = Math.pow(10, Math.floor(Math.log10(countryData.population)));
-
-        possibleClues.push({
-            type: 'population',
-            constraint: {
-                type: '<',
-                value: base * Math.ceil((countryData.population * (Math.random() + 1.05)) / base)
-            }
-        });
-
-        possibleClues.push({
-            type: 'population',
-            constraint: {
-                type: '>',
-                value: base * Math.floor((countryData.population * (Math.random() / 2.0 + 0.25)) / base)
-            }
-        });
+        _addNumericClues(possibleClues, countryData, 'population');
     }
 
     if (remainingTypes.indexOf('peak_elevation') !== -1) {
-        let base = Math.pow(10, Math.floor(Math.log10(countryData.peak_elevation)));
-
-        possibleClues.push({
-            type: 'peak_elevation',
-            constraint: {
-                type: '<',
-                value: base * Math.ceil((countryData.peak_elevation * (Math.random() + 1.05)) / base)
-            }
-        });
-
-        possibleClues.push({
-            type: 'peak_elevation',
-            constraint: {
-                type: '>',
-                value: base * Math.floor((countryData.peak_elevation * (Math.random() / 2.0 + 0.25)) / base)
-            }
-        });
+        _addNumericClues(possibleClues, countryData, 'peak_elevation');
     }
 
     if (remainingTypes.indexOf('land_area') !== -1) {
-        let base = Math.pow(10, Math.floor(Math.log10(countryData.land_area)));
-
-        possibleClues.push({
-            type: 'land_area',
-            constraint: {
-                type: '<',
-                value: base * Math.ceil((countryData.land_area * (Math.random() + 1.05)) / base)
-            }
-        });
-
-        possibleClues.push({
-            type: 'land_area',
-            constraint: {
-                type: '>',
-                value: base * Math.floor((countryData.land_area * (Math.random() / 2.0 + 0.25)) / base)
-            }
-        });
+        _addNumericClues(possibleClues, countryData, 'land_area');
     }
 
     if (remainingTypes.indexOf('region') !== -1) {
