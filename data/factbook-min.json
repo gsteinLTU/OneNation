@@ -930,7 +930,7 @@
       "Republique francaise"
     ],
     "population": 67364357,
-    "region": "Europe;",
+    "region": "Europe",
     "landlocked": false,
     "land_area": 640427,
     "peak_elevation": 4810,
@@ -2694,7 +2694,7 @@
       "Ukrayina"
     ],
     "population": 43952299,
-    "region": "AsiaEurope",
+    "region": "Europe",
     "landlocked": false,
     "land_area": 579330,
     "peak_elevation": 2061,

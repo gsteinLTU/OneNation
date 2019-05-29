@@ -104,7 +104,14 @@ for (let c of countries) {
         minData[c]['names'] = names;
 
         minData[c]['population'] = countryData['people']['population']['total'];
+
         minData[c]['region'] = countryData['geography']['map_references'];
+
+        // Fix incorrect formatting on Ukraine and France
+        if (minData[c]['region'] === 'AsiaEurope' || minData[c]['region'] === 'Europe;') {
+            minData[c]['region'] = 'Europe';
+        }
+
         minData[c]['landlocked'] = countryData['geography']['coastline']['value'] == 0;
 
         if (countryData['geography']['area']['land'] !== undefined) {
