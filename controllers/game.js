@@ -65,6 +65,18 @@ const _clueTypes = ['name',
     'land_area',
 ];
 
+const _regions = [
+    'Africa',
+    'Asia',
+    'Central America and the Caribbean',
+    'Europe',
+    'Middle East',
+    'North America',
+    'Oceania',
+    'South America',
+    'Southeast Asia'
+];
+
 /**
  * Determine if a country matches a clue
  */
@@ -94,8 +106,13 @@ exports._matchClue = (country, clue) => {
 /**
  * Get countries remaining with clues
  * @param {Array} existingClues 
+ * @param {Array=} countries
  */
-exports._getRemaingCountries = (existingClues) => {
+exports._getRemaingCountries = (existingClues, countries = null) => {
+    if (countries === null) {
+        countries = _countriesList;
+    }
+
     return _countriesList.filter(c => existingClues.every(clue => exports._matchClue(c, clue)));
 };
 
@@ -104,17 +121,186 @@ exports._getRemaingCountries = (existingClues) => {
  */
 exports._generateClue = (country, existingClues) => {
     const countryData = data[country];
-
-    const newClue = {};
+    const countryName = countryData.names[0];
 
     // Get clue types that weren't used yet
     const remainingTypes = _clueTypes.filter(type => existingClues.find(clue => clue.type === type) === undefined);
 
     // Find countries that match all existing clues
+    const remainingCountries = exports._getRemaingCountries(existingClues);
 
+    const possibleClues = [];
 
+    if (remainingTypes.indexOf('name') !== -1) {
+        possibleClues.push({
+            type: 'name',
+            constraint: {
+                type: 'startswith',
+                value: countryName[0]
+            }
+        });
 
-    return newClue;
+        possibleClues.push({
+            type: 'name',
+            constraint: {
+                type: 'endswith',
+                value: countryName[countryName.length - 1]
+            }
+        });
+
+        for (let i = 'A'; i <= 'Z'; i++) {
+            if (countryName.indexOf(i) !== -1) {
+                possibleClues.push({
+                    type: 'name',
+                    constraint: {
+                        type: 'contains',
+                        value: i
+                    }
+                });
+            } else {
+                possibleClues.push({
+                    type: 'name',
+                    constraint: {
+                        type: 'nocontains',
+                        value: i
+                    }
+                });
+            }
+        }
+
+        possibleClues.push({
+            type: 'name',
+            constraint: {
+                type: 'length',
+                value: countryName.length
+            }
+        });
+    }
+
+    if (remainingTypes.indexOf('capitalname') !== -1) {
+        possibleClues.push({
+            type: 'capitalname',
+            constraint: {
+                type: 'startswith',
+                value: countryData.capital[0]
+            }
+        });
+
+        possibleClues.push({
+            type: 'capitalname',
+            constraint: {
+                type: 'endswith',
+                value: countryData.capital[countryData.capital.length - 1]
+            }
+        });
+
+        for (let i = 'A'; i <= 'Z'; i++) {
+            if (countryData.capital.indexOf(i) !== -1) {
+                possibleClues.push({
+                    type: 'capitalname',
+                    constraint: {
+                        type: 'contains',
+                        value: i
+                    }
+                });
+            } else {
+                possibleClues.push({
+                    type: 'capitalname',
+                    constraint: {
+                        type: 'nocontains',
+                        value: i
+                    }
+                });
+            }
+        }
+
+        possibleClues.push({
+            type: 'capitalname',
+            constraint: {
+                type: 'length',
+                value: countryData.capital.length
+            }
+        });
+    }
+
+    if (remainingTypes.indexOf('landlocked') !== -1) {
+        possibleClues.push({
+            type: 'landlocked',
+            constraint: countryData.landlocked
+        });
+    }
+
+    if (remainingTypes.indexOf('population') !== -1) {
+        let base = Math.pow(10, Math.floor(Math.log10(countryData.population)));
+
+        possibleClues.push({
+            type: 'population',
+            constraint: {
+                type: '<',
+                value: base * Math.ceil((countryData.population * (Math.random() + 1.05)) / base)
+            }
+        });
+
+        possibleClues.push({
+            type: 'population',
+            constraint: {
+                type: '>',
+                value: base * Math.floor((countryData.population * (Math.random() / 2.0 + 0.25)) / base)
+            }
+        });
+    }
+
+    if (remainingTypes.indexOf('peak_elevation') !== -1) {
+        let base = Math.pow(10, Math.floor(Math.log10(countryData.peak_elevation)));
+
+        possibleClues.push({
+            type: 'peak_elevation',
+            constraint: {
+                type: '<',
+                value: base * Math.ceil((countryData.peak_elevation * (Math.random() + 1.05)) / base)
+            }
+        });
+
+        possibleClues.push({
+            type: 'peak_elevation',
+            constraint: {
+                type: '>',
+                value: base * Math.floor((countryData.peak_elevation * (Math.random() / 2.0 + 0.25)) / base)
+            }
+        });
+    }
+
+    if (remainingTypes.indexOf('land_area') !== -1) {
+        let base = Math.pow(10, Math.floor(Math.log10(countryData.land_area)));
+
+        possibleClues.push({
+            type: 'land_area',
+            constraint: {
+                type: '<',
+                value: base * Math.ceil((countryData.land_area * (Math.random() + 1.05)) / base)
+            }
+        });
+
+        possibleClues.push({
+            type: 'land_area',
+            constraint: {
+                type: '>',
+                value: base * Math.floor((countryData.land_area * (Math.random() / 2.0 + 0.25)) / base)
+            }
+        });
+    }
+
+    if (remainingTypes.indexOf('region') !== -1) {
+        possibleClues.push({
+            type: 'region',
+            constraint: _regions.filter(region => region === countryData.region || Math.random() > 0.8)
+        });
+    }
+
+    // Find clue that gets closest to half remaining
+    const scores = possibleClues.map(clue => Math.abs(exports._getRemaingCountries([...existingClues, clue], remainingCountries).length - remainingCountries.length / 2));
+
+    return possibleClues[scores.indexOf(Math.min(...scores))];
 };
 
 /**
@@ -138,3 +324,4 @@ exports.postGame = (req, res, next) => {
     res.send('hi');
 };
 
+console.log(exports._generateClue('uganda', []));
