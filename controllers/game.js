@@ -126,6 +126,11 @@ exports._generateClue = (country, existingClues) => {
     // Get clue types that weren't used yet
     const remainingTypes = _clueTypes.filter(type => existingClues.find(clue => clue.type === type) === undefined);
 
+    // Failsafe
+    if (remainingTypes.length === 0) {
+        remainingTypes.push('name');
+    }
+
     // Find countries that match all existing clues
     const remainingCountries = exports._getRemaingCountries(existingClues);
 
@@ -149,7 +154,7 @@ exports._generateClue = (country, existingClues) => {
         });
 
         for (let i = 'A'; i <= 'Z'; i++) {
-            if (countryName.indexOf(i) !== -1) {
+            if (countryName.toUpperCase().indexOf(i) !== -1) {
                 possibleClues.push({
                     type: 'name',
                     constraint: {
@@ -195,7 +200,7 @@ exports._generateClue = (country, existingClues) => {
         });
 
         for (let i = 'A'; i <= 'Z'; i++) {
-            if (countryData.capital.indexOf(i) !== -1) {
+            if (countryData.capital.toUpperCase().indexOf(i) !== -1) {
                 possibleClues.push({
                     type: 'capitalname',
                     constraint: {
@@ -324,4 +329,11 @@ exports.postGame = (req, res, next) => {
     res.send('hi');
 };
 
-console.log(exports._generateClue('uganda', []));
+let target = 'united_states';
+let clues = [exports._generateClue(target, [])];
+while (exports._getRemaingCountries(clues).length > 1) {
+    clues = [...clues, exports._generateClue(target, clues)];
+    console.log(exports._getRemaingCountries(clues));
+    console.log(exports._getRemaingCountries(clues).length);
+}
+console.log(clues);
