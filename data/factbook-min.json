@@ -24,7 +24,7 @@
     "landlocked": false,
     "land_area": 27398,
     "peak_elevation": 2764,
-    "capital": "Tirana (Tirane)"
+    "capital": "Tirana"
   },
   "algeria": {
     "names": [
@@ -177,7 +177,7 @@
     "landlocked": true,
     "land_area": 82629,
     "peak_elevation": 4466,
-    "capital": "Baku (Baki, Baky)"
+    "capital": "Baku"
   },
   "bahamas_the": {
     "names": [
@@ -287,7 +287,7 @@
     "landlocked": false,
     "land_area": 110622,
     "peak_elevation": 658,
-    "capital": "Porto-Novo (constitutional capital); Cotonou (seat of government)"
+    "capital": "Porto-Novo"
   },
   "bermuda": {
     "names": [
@@ -325,7 +325,7 @@
     "landlocked": true,
     "land_area": 1083301,
     "peak_elevation": 6542,
-    "capital": "La Paz (administrative capital); Sucre (constitutional [legislative and judicial] capital)"
+    "capital": "La Paz"
   },
   "bosnia_and_herzegovina": {
     "names": [
@@ -429,7 +429,7 @@
     "landlocked": false,
     "land_area": 653508,
     "peak_elevation": 5870,
-    "capital": "Rangoon (Yangon); note - Nay Pyi Taw is the administrative capital"
+    "capital": "Rangoon"
   },
   "burundi": {
     "names": [
@@ -508,7 +508,7 @@
     "landlocked": false,
     "land_area": 264,
     "peak_elevation": 1,
-    "capital": "George Town (on Grand Cayman)"
+    "capital": "George Town"
   },
   "central_african_republic": {
     "names": [
@@ -551,7 +551,7 @@
     "landlocked": false,
     "land_area": 743812,
     "peak_elevation": 6880,
-    "capital": "Santiago; note - Valparaiso is the seat of the national legislature"
+    "capital": "Santiago"
   },
   "china": {
     "names": [
@@ -565,7 +565,8 @@
     "region": "Asia",
     "landlocked": false,
     "land_area": 9326410,
-    "peak_elevation": 8848
+    "peak_elevation": 8848,
+    "capital": "Beijing"
   },
   "colombia": {
     "names": [
@@ -649,7 +650,7 @@
     "landlocked": false,
     "land_area": 318003,
     "peak_elevation": 1752,
-    "capital": "Yamoussoukro (legislative capital), Abidjan (administrative capital); note - although Yamoussoukro has been the official capital since 1983, Abidjan remains the administrative capital as well as the officially designated commercial capital; the US, like other countries, maintains its Embassy in Abidjan"
+    "capital": "Yamoussoukro Abidjan"
   },
   "croatia": {
     "names": [
@@ -693,7 +694,7 @@
     "landlocked": false,
     "land_area": 9241,
     "peak_elevation": 1951,
-    "capital": "Nicosia (Lefkosia/Lefkosa)"
+    "capital": "Nicosia"
   },
   "czechia": {
     "names": [
@@ -821,7 +822,7 @@
     "landlocked": false,
     "land_area": 28051,
     "peak_elevation": 3008,
-    "capital": "Malabo; note - a new capital of Oyala is being built on the mainland near Djibloho; Malabo is on the island of Bioko"
+    "capital": "Malabo"
   },
   "eritrea": {
     "names": [
@@ -835,7 +836,7 @@
     "landlocked": false,
     "land_area": 101000,
     "peak_elevation": 3018,
-    "capital": "Asmara (Asmera)"
+    "capital": "Asmara"
   },
   "estonia": {
     "names": [
@@ -862,7 +863,7 @@
     "landlocked": true,
     "land_area": 17204,
     "peak_elevation": 1862,
-    "capital": "Mbabane (administrative capital); Lobamba (royal and legislative capital)"
+    "capital": "Mbabane"
   },
   "ethiopia": {
     "names": [
@@ -904,7 +905,7 @@
     "landlocked": false,
     "land_area": 18274,
     "peak_elevation": 1324,
-    "capital": "Suva (on Viti Levu)"
+    "capital": "Suva"
   },
   "finland": {
     "names": [
@@ -947,7 +948,7 @@
     "landlocked": false,
     "land_area": 3827,
     "peak_elevation": 2241,
-    "capital": "Papeete (located on Tahiti)"
+    "capital": "Papeete"
   },
   "gabon": {
     "names": [
@@ -1050,7 +1051,7 @@
     "landlocked": false,
     "land_area": 2166086,
     "peak_elevation": 3694,
-    "capital": "Nuuk (Godthaab)"
+    "capital": "Nuuk"
   },
   "grenada": {
     "names": [
@@ -1074,7 +1075,7 @@
     "landlocked": false,
     "land_area": 544,
     "peak_elevation": 406,
-    "capital": "Hagatna (Agana)"
+    "capital": "Hagatna"
   },
   "guatemala": {
     "names": [
@@ -1291,7 +1292,7 @@
     "landlocked": false,
     "land_area": 20330,
     "peak_elevation": 1208,
-    "capital": "Jerusalem; note - the US recognized Jerusalem as Israel’s capital in December 2017 without taking a position on the specific boundaries of Israeli sovereignty"
+    "capital": "Jerusalem"
   },
   "italy": {
     "names": [
@@ -1430,7 +1431,7 @@
     "landlocked": false,
     "land_area": 96920,
     "peak_elevation": 1950,
-    "capital": "Seoul; note - Sejong, located some 120 km (75 mi) south of Seoul, is being developed as a new capital"
+    "capital": "Seoul"
   },
   "kosovo": {
     "names": [
@@ -1444,7 +1445,7 @@
     "landlocked": true,
     "land_area": 10887,
     "peak_elevation": 2656,
-    "capital": "Pristina (Prishtine, Prishtina)"
+    "capital": "Pristina"
   },
   "kuwait": {
     "names": [
@@ -1485,7 +1486,7 @@
     "landlocked": true,
     "land_area": 230800,
     "peak_elevation": 2817,
-    "capital": "Vientiane (Viangchan)"
+    "capital": "Vientiane"
   },
   "latvia": {
     "names": [
@@ -1551,7 +1552,7 @@
     "landlocked": false,
     "land_area": 1759540,
     "peak_elevation": 2267,
-    "capital": "Tripoli (Tarabulus)"
+    "capital": "Tripoli"
   },
   "liechtenstein": {
     "names": [
@@ -1631,7 +1632,7 @@
     "landlocked": false,
     "land_area": 328657,
     "peak_elevation": 4095,
-    "capital": "Kuala Lumpur; note - nearby Putrajaya is referred to as a federal government administrative center but not the capital; Parliament meets in Kuala Lumpur"
+    "capital": "Kuala Lumpur"
   },
   "maldives": {
     "names": [
@@ -1684,7 +1685,7 @@
     "landlocked": false,
     "land_area": 181,
     "peak_elevation": 14,
-    "capital": "Majuro; note - the capital is an atoll of 64 islands; governmental buildings are housed on three fused islands: Djarrit, Uliga, and Delap"
+    "capital": "Majuro"
   },
   "mauritania": {
     "names": [
@@ -1723,7 +1724,7 @@
     "landlocked": false,
     "land_area": 1943945,
     "peak_elevation": 5636,
-    "capital": "Mexico City (Ciudad de Mexico)"
+    "capital": "Mexico City"
   },
   "micronesia_federated_states_of": {
     "names": [
@@ -1749,7 +1750,7 @@
     "landlocked": true,
     "land_area": 32891,
     "peak_elevation": 430,
-    "capital": "Chisinau in Romanian (Kishinev in Russian)"
+    "capital": "Chisinau in Romanian"
   },
   "monaco": {
     "names": [
@@ -1786,7 +1787,7 @@
     "landlocked": false,
     "land_area": 13452,
     "peak_elevation": 2522,
-    "capital": "Podgorica; note - Cetinje retains the status of \"Old Royal Capital\""
+    "capital": "Podgorica"
   },
   "morocco": {
     "names": [
@@ -1854,7 +1855,7 @@
     "landlocked": false,
     "land_area": 33893,
     "peak_elevation": 862,
-    "capital": "Amsterdam; note - The Hague is the seat of government"
+    "capital": "Amsterdam"
   },
   "new_caledonia": {
     "names": [
@@ -2234,7 +2235,7 @@
     "landlocked": true,
     "land_area": 61,
     "peak_elevation": 739,
-    "capital": "San Marino (city)"
+    "capital": "San Marino"
   },
   "sao_tome_and_principe": {
     "names": [
@@ -2290,7 +2291,7 @@
     "landlocked": true,
     "land_area": 77474,
     "peak_elevation": 2169,
-    "capital": "Belgrade (Beograd)"
+    "capital": "Belgrade"
   },
   "seychelles": {
     "names": [
@@ -2392,7 +2393,7 @@
     "landlocked": false,
     "land_area": 1214470,
     "peak_elevation": 3408,
-    "capital": "Pretoria (administrative capital); Cape Town (legislative capital); Bloemfontein (judicial capital)"
+    "capital": "Pretoria"
   },
   "south_sudan": {
     "names": [
@@ -2435,7 +2436,7 @@
     "landlocked": false,
     "land_area": 64630,
     "peak_elevation": 2524,
-    "capital": "Colombo (commercial capital); Sri Jayewardenepura Kotte (legislative capital)"
+    "capital": "Colombo"
   },
   "sudan": {
     "names": [
@@ -2543,7 +2544,7 @@
     "landlocked": false,
     "land_area": 885800,
     "peak_elevation": 5895,
-    "capital": "Dodoma (legislative capital), Dar es Salaam (administrative capital); note - Dodoma was designated the national capital in 1996 and serves as the meeting place for the National Assembly; Dar es Salaam remains the de facto capital, the country's largest city and commercial center, and the site of the executive branch offices and diplomatic representation; the government contends that it will complete the transfer of the executive branch to Dodoma by 2020"
+    "capital": "Dodoma Dar es Salaam"
   },
   "thailand": {
     "names": [
@@ -2649,7 +2650,7 @@
     "landlocked": true,
     "land_area": 469930,
     "peak_elevation": 3139,
-    "capital": "Ashgabat (Ashkhabad)"
+    "capital": "Ashgabat"
   },
   "turks_and_caicos_islands": {
     "names": [
@@ -2662,7 +2663,7 @@
     "landlocked": false,
     "land_area": 948,
     "peak_elevation": 48,
-    "capital": "Grand Turk (Cockburn Town)"
+    "capital": "Grand Turk"
   },
   "tuvalu": {
     "names": [
@@ -2673,7 +2674,7 @@
     "landlocked": false,
     "land_area": 26,
     "peak_elevation": 5,
-    "capital": "Funafuti; note - the capital is an atoll of some 29 islets; administrative offices are in Vaiaku Village on Fongafale Islet"
+    "capital": "Funafuti"
   },
   "uganda": {
     "names": [
@@ -2697,7 +2698,7 @@
     "landlocked": false,
     "land_area": 579330,
     "peak_elevation": 2061,
-    "capital": "Kyiv (Kiev)"
+    "capital": "Kyiv"
   },
   "united_arab_emirates": {
     "names": [
@@ -2737,7 +2738,7 @@
     "landlocked": false,
     "land_area": 9147593,
     "peak_elevation": 6190,
-    "capital": "Washington, DC"
+    "capital": "Washington DC"
   },
   "uruguay": {
     "names": [
@@ -2764,7 +2765,7 @@
     "landlocked": true,
     "land_area": 425400,
     "peak_elevation": 4301,
-    "capital": "Tashkent (Toshkent)"
+    "capital": "Tashkent"
   },
   "vanuatu": {
     "names": [
@@ -2777,7 +2778,7 @@
     "landlocked": false,
     "land_area": 12189,
     "peak_elevation": 1877,
-    "capital": "Port-Vila (on Efate)"
+    "capital": "Port-Vila"
   },
   "venezuela": {
     "names": [
@@ -2805,7 +2806,7 @@
     "landlocked": false,
     "land_area": 310070,
     "peak_elevation": 3144,
-    "capital": "Hanoi (Ha Noi)"
+    "capital": "Hanoi"
   },
   "virgin_islands": {
     "names": [
@@ -2832,17 +2833,7 @@
     "landlocked": false,
     "land_area": 142,
     "peak_elevation": 522,
-    "capital": "Mata-Utu (on Ile Uvea)"
-  },
-  "western_sahara": {
-    "names": [
-      "Western Sahara"
-    ],
-    "population": 619551,
-    "region": "Africa",
-    "landlocked": false,
-    "land_area": 266000,
-    "peak_elevation": 805
+    "capital": "Mata-Utu"
   },
   "yemen": {
     "names": [
@@ -2868,7 +2859,7 @@
     "landlocked": true,
     "land_area": 743398,
     "peak_elevation": 2301,
-    "capital": "Lusaka; note - a proposal to build a new capital city in Ngabwe was announced in May 2017"
+    "capital": "Lusaka"
   },
   "zimbabwe": {
     "names": [

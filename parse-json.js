@@ -120,7 +120,28 @@ for (let c of countries) {
             // Data for Ecuador is formatted wrong
             minData[c]['peak_elevation'] = Number.parseInt(countryData['geography']['elevation']['highest_point'].split(' ')[1].replace(',', ''));
         }
-        minData[c]['capital'] = countryData['government']['capital']['name'];
+
+        let capital = countryData['government']['capital']['name'];
+
+        if (capital === undefined) {
+            capital = countryData['government']['capital']['capital'];
+        }
+
+
+        if (capital === undefined) {
+            delete minData[c];
+            continue;
+        }
+
+        // Clean up names
+        if (capital.indexOf(';') !== -1) {
+            capital = capital.substr(0, capital.indexOf(';'));
+        }
+
+        capital = capital.replace(/ \(.+?\)/g, '');
+        capital = capital.replace(',', '');
+
+        minData[c]['capital'] = capital;
     }
 }
 
