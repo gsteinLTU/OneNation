@@ -103,6 +103,10 @@ exports._matchClue = (country, clue) => {
     return false;
 }
 
+exports._matchesClues = (country, clues) => {
+    return clues.every(clue => exports._matchClue(country, clue));
+}
+
 /**
  * Get countries remaining with clues
  * @param {Array} existingClues 
@@ -113,7 +117,7 @@ exports._getRemaingCountries = (existingClues, countries = null) => {
         countries = _countriesList;
     }
 
-    return _countriesList.filter(c => existingClues.every(clue => exports._matchClue(c, clue)));
+    return _countriesList.filter(c => exports._matchesClues(c, existingClues));
 };
 
 function _addNumericClues(possibleClues, countryData, type) {
@@ -248,10 +252,14 @@ exports.getGameIndex = (req, res, next) => {
     res.render('game/index.ejs', { pageTitle: 'OneNation' });
 };
 
+let target = exports._pickCountry();
+let clues = [exports._generateClue(target, [])];
 /**
  * Display game interface
  */
 exports.getGame = (req, res, next) => {
+    let target = exports._pickCountry();
+    let clues = [exports._generateClue(target, [])];
     res.render('game/game.ejs', { pageTitle: 'Play - OneNation' });
 };
 
@@ -259,14 +267,21 @@ exports.getGame = (req, res, next) => {
  * Handle some game API requests
  */
 exports.postGame = (req, res, next) => {
-    res.send('hi');
+    if (req.body.action === 'clues') {
+        res.send(JSON.stringify({
+            clues: clues,
+            remaining: exports.remainingCountries(clues)
+        }));
+    }
+
+    if (req.body.action === 'guess') {
+        res.send(JSON.stringify({
+            correct: exports._matchesClues(req.body.guess, clues),
+            clues: clues,
+            remaining: exports.remainingCountries(clues)
+        }));
+    }
 };
 
-let target = 'united_states';
-let clues = [exports._generateClue(target, [])];
-while (exports._getRemaingCountries(clues).length > 1) {
-    clues = [...clues, exports._generateClue(target, clues)];
-    console.log(exports._getRemaingCountries(clues));
-    console.log(exports._getRemaingCountries(clues).length);
-}
-console.log(clues);
+
+

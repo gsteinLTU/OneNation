@@ -1,4 +1,4 @@
-const { _matchClue, _getRemaingCountries, _countriesList } = require('../controllers/game');
+const { _matchClue, _matchesClues, _getRemaingCountries, _countriesList } = require('../controllers/game');
 const { expect } = require('chai');
 
 describe('clue matching tests', () => {
@@ -225,6 +225,18 @@ describe('remaining countries tests', () => {
         }]).length).equals(44);
     });
 
+    it('should return correct matching countries with one clue', () => {
+        expect(_matchesClues('uganda', [{
+            type: 'landlocked',
+            constraint: true
+        }])).is.true;
+
+        expect(_matchesClues('united_states', [{
+            type: 'landlocked',
+            constraint: true
+        }])).is.false;
+    });
+
     it('should return correct result remaining with list of clues', () => {
         const testResult = _getRemaingCountries(
             [
@@ -265,5 +277,46 @@ describe('remaining countries tests', () => {
 
         expect(testResult.length).equals(1);
         expect(testResult[0]).equals('oman');
+    });
+
+
+    it('should return correct result matching with list of clues', () => {
+        const testClues = [
+            {
+                type: 'name',
+                constraint: {
+                    type: 'nocontains',
+                    value: ' '
+                }
+            },
+            {
+                type: 'region',
+                constraint: ['Europe', 'Asia', 'Middle East']
+            },
+            {
+                type: 'population',
+                constraint: {
+                    type: '<',
+                    value: 10000000
+                }
+            },
+            {
+                type: 'capitalname',
+                constraint: {
+                    type: 'length',
+                    value: 6
+                }
+            },
+            {
+                type: 'land_area',
+                constraint: {
+                    type: '>',
+                    value: 200000
+                }
+            }
+        ];
+
+        expect(_matchesClues('oman', testClues)).is.true;
+        expect(_matchesClues('saudi_arabia', testClues)).is.false;
     });
 })
