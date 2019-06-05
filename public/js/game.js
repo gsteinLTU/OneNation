@@ -107,7 +107,7 @@ var updateCluesList = function () {
     }
 
     $('#clues').html(tempClues.innerHTML);
-    $('#remaining').text(remaining.length);
+    $('#remaining').text(remaining);
 };
 
 var increaseTimer = function () {
@@ -152,6 +152,28 @@ $(function () {
                     remaining = parsed.remaining;
                     updateCluesList();
                     $('#guess').val('');
+
+                    // Display right answers
+                    for (var i = 0; i < parsed.matching.length; i++) {
+                        $($('#clues li')[i]).css('color', 'green');
+
+                        setTimeout(function () {
+                            $('#clues li').each(function (i) { $(this).css('color', 'inherit'); });
+                        }, 1000);
+                    }
+                } else {
+                    // Display wrong answers
+                    for (var i = 0; i < parsed.matching.length; i++) {
+                        if (!parsed.matching[i]) {
+                            $($('#clues li')[i]).css('color', 'red');
+                        } else {
+                            $($('#clues li')[i]).css('color', 'green');
+                        }
+
+                        setTimeout(function () {
+                            $('#clues li').each(function (i) { $(this).css('color', 'inherit'); });
+                        }, 1000);
+                    }
                 }
             });
         })

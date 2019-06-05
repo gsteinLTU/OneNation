@@ -286,7 +286,7 @@ exports.postGame = (req, res, next) => {
     if (req.body.action === 'clues') {
         res.send(JSON.stringify({
             clues: clues,
-            remaining: exports._getRemaingCountries(clues)
+            remaining: exports._getRemaingCountries(clues).length
         }));
     }
 
@@ -294,12 +294,22 @@ exports.postGame = (req, res, next) => {
 
         let country = exports._findID(req.body.guess);
         if (exports._matchesClues(country, clues)) {
-            clues = [...clues, exports._generateClue(target, clues)];
-            res.send(JSON.stringify({
-                correct: true,
-                clues: clues,
-                remaining: exports._getRemaingCountries(clues)
-            }));
+            if (exports._getRemaingCountries(clues).length === 1) {
+                res.send(JSON.stringify({
+                    correct: true,
+                    clues: clues,
+                    remaining: 1,
+                    winner: true,
+                }));
+            } else {
+                clues = [...clues, exports._generateClue(target, clues)];
+                res.send(JSON.stringify({
+                    correct: true,
+                    clues: clues,
+                    remaining: exports._getRemaingCountries(clues).length,
+                    winner: false,
+                }));
+            }
         } else {
             res.send(JSON.stringify({
                 correct: false,
