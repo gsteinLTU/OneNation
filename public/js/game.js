@@ -135,5 +135,19 @@ $(function () {
         remaining = JSON.parse(data).remaining;
         updateCluesList();
         setTimeout(increaseTimer, 1000);
+
+        $('#guess').change(function () {
+            var guess = $('#guess').val();
+            $.post('/play', { action: 'guess', guess: guess }, function (data, status) {
+                // TODO: handle error cases
+                var parsed = JSON.parse(data);
+                console.log(parsed);
+                if (parsed.correct) {
+                    clues = parsed.clues;
+                    remaining = parsed.remaining;
+                    updateCluesList();
+                }
+            });
+        })
     });
 });

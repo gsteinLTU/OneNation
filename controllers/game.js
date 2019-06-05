@@ -12,6 +12,21 @@ exports._pickCountry = () => {
 }
 
 /**
+ * Find an id in the countries list for a name
+ */
+exports._findID = (name) => {
+    let match = exports._countriesList.filter(id => {
+        return data[id].names.map(name => name.toLowerCase()).indexOf(name.toLowerCase()) !== -1;
+    });
+
+    if (match.length > 0) {
+        return match[0];
+    } else {
+        return null;
+    }
+}
+
+/**
  * Tests if a string matches a clue
  * @param {String} string String to test 
  * @param {Object} clue Clue to match
@@ -254,6 +269,7 @@ exports.getGameIndex = (req, res, next) => {
 
 let target = exports._pickCountry();
 let clues = [exports._generateClue(target, [])];
+
 /**
  * Display game interface
  */
@@ -275,10 +291,19 @@ exports.postGame = (req, res, next) => {
     }
 
     if (req.body.action === 'guess') {
-        res.send(JSON.stringify({
-            correct: exports._matchesClues(req.body.guess, clues),
-            clues: clues,
-            remaining: exports._getRemaingCountries(clues)
-        }));
+
+        let country = exports._findID(req.body.guess);
+        if (exports._matchesClues(country, clues)) {
+            clues = [...clues, exports._generateClue(target, clues)];
+            res.send(JSON.stringify({
+                correct: true,
+                clues: clues,
+                remaining: exports._getRemaingCountries(clues)
+            }));
+        } else {
+            res.send(JSON.stringify({
+                correct: false,
+            }));
+        }
     }
 };
