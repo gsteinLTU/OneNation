@@ -70,6 +70,27 @@ var clueToString = function (clue) {
         return stringClueToString(clue);
     }
 
+    if (clue.type === 'landlocked') {
+        return 'Is ' + clue.constraint === true ? '' : 'not ' + 'landlocked';
+    }
+
+    if (clue.type === 'region') {
+        var temp = '';
+
+        if (clue.constraint.length > 1) {
+            for (var i = 0; i < clue.constraint.length - 1; i++) {
+                temp += clue.constraint[i] + ', ';
+            }
+
+            temp += 'or ' + clue.constraint[clue.constraint.length - 1];
+
+        } else {
+            temp = clue[0];
+        }
+
+        return 'In ' + temp;
+    }
+
     return cluetexts[clue.type];
 };
 
