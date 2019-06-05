@@ -85,7 +85,7 @@ var clueToString = function (clue) {
             temp += 'or ' + clue.constraint[clue.constraint.length - 1];
 
         } else {
-            temp = clue[0];
+            temp = clue.constraint[0];
         }
 
         return 'In ' + temp;
