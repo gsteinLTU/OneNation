@@ -270,7 +270,7 @@ exports.postGame = (req, res, next) => {
     if (req.body.action === 'clues') {
         res.send(JSON.stringify({
             clues: clues,
-            remaining: exports.remainingCountries(clues)
+            remaining: exports._getRemaingCountries(clues)
         }));
     }
 
@@ -278,10 +278,7 @@ exports.postGame = (req, res, next) => {
         res.send(JSON.stringify({
             correct: exports._matchesClues(req.body.guess, clues),
             clues: clues,
-            remaining: exports.remainingCountries(clues)
+            remaining: exports._getRemaingCountries(clues)
         }));
     }
 };
-
-
-
