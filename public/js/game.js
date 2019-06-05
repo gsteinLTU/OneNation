@@ -89,11 +89,30 @@ var updateCluesList = function () {
     $('#remaining').text(remaining.length);
 };
 
+var increaseTimer = function () {
+    var temp = $('#timer').text().split(':');
+
+    if (temp[1] == '59') {
+        temp[0]++;
+        temp[1] = 0;
+    } else {
+        temp[1]++;
+    }
+
+    $('#timer').text(temp[0] + ':' + (temp[1] < 10 ? '0' : '') + temp[1]);
+    setTimeout(increaseTimer, 1000);
+};
+
 $(function () {
+    $('#guess').val('');
+
     // Get intiial clues
     $.post('/play', { action: 'clues' }, function (data, status) {
+        // TODO: handle error cases
+
         clues = JSON.parse(data).clues;
         remaining = JSON.parse(data).remaining;
         updateCluesList();
+        setTimeout(increaseTimer, 1000);
     });
 });
