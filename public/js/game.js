@@ -71,7 +71,7 @@ var clueToString = function (clue) {
     }
 
     if (clue.type === 'landlocked') {
-        return 'Is ' + clue.constraint === true ? '' : 'not ' + 'landlocked';
+        return 'Is ' + (clue.constraint === true ? '' : 'not ') + 'landlocked';
     }
 
     if (clue.type === 'region') {
@@ -106,7 +106,7 @@ var updateCluesList = function () {
         tempClues.appendChild(tempRow);
     }
 
-    $('#clues').replaceWith(tempClues);
+    $('#clues').html(tempClues.innerHTML);
     $('#remaining').text(remaining.length);
 };
 
@@ -138,6 +138,11 @@ $(function () {
 
         $('#guess').change(function () {
             var guess = $('#guess').val();
+
+            if (guess.length < 2) {
+                return;
+            }
+
             $.post('/play', { action: 'guess', guess: guess }, function (data, status) {
                 // TODO: handle error cases
                 var parsed = JSON.parse(data);
@@ -146,6 +151,7 @@ $(function () {
                     clues = parsed.clues;
                     remaining = parsed.remaining;
                     updateCluesList();
+                    $('#guess').val('');
                 }
             });
         })

@@ -303,6 +303,7 @@ exports.postGame = (req, res, next) => {
         } else {
             res.send(JSON.stringify({
                 correct: false,
+                matching: clues.map(clue => exports._matchClue(country, clue)),
             }));
         }
     }
