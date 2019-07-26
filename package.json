@@ -4,7 +4,7 @@
   "description": "A game of category elimination and country guessing.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "test": "mocha",
     "parsejson": "node parse-json.js"
   },
@@ -29,7 +29,6 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "ejs": "^2.6.1",
-    "express": "^4.17.1",
-    "nodemon": "^1.19.1"
+    "express": "^4.17.1"
   }
 }
