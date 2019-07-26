@@ -32,27 +32,20 @@ exports._findID = (name) => {
  * @param {Object} clue Clue to match
  */
 function _testStringClue(string, clue) {
-    if (clue.constraint.type === 'startsWith') {
-        return string.toLowerCase().startsWith(clue.constraint.value.toLowerCase());
+    switch (clue.constraint.type) {
+        case 'startsWith':
+            return string.toLowerCase().startsWith(clue.constraint.value.toLowerCase());
+        case 'endsWith':
+            return string.toLowerCase().endsWith(clue.constraint.value.toLowerCase());
+        case 'contains':
+            return string.toLowerCase().indexOf(clue.constraint.value.toLowerCase()) !== -1;
+        case 'nocontains':
+            return string.toLowerCase().indexOf(clue.constraint.value.toLowerCase()) === -1;
+        case 'length':
+            return string.length === clue.constraint.value;
+        default:
+            return false;
     }
-
-    if (clue.constraint.type === 'endsWith') {
-        return string.toLowerCase().endsWith(clue.constraint.value.toLowerCase());
-    }
-
-    if (clue.constraint.type === 'contains') {
-        return string.toLowerCase().indexOf(clue.constraint.value.toLowerCase()) !== -1;
-    }
-
-    if (clue.constraint.type === 'nocontains') {
-        return string.toLowerCase().indexOf(clue.constraint.value.toLowerCase()) === -1;
-    }
-
-    if (clue.constraint.type === 'length') {
-        return string.length === clue.constraint.value;
-    }
-
-    return false;
 }
 
 /**
@@ -157,6 +150,7 @@ function _addNumericClues(possibleClues, countryData, type) {
 
 
 function _addStringClues(possibleClues, value, type) {
+    // "Starts with _" clue
     possibleClues.push({
         type: type,
         constraint: {
@@ -165,6 +159,7 @@ function _addStringClues(possibleClues, value, type) {
         }
     });
 
+    // "Ends with _" clue
     possibleClues.push({
         type: type,
         constraint: {
@@ -173,6 +168,7 @@ function _addStringClues(possibleClues, value, type) {
         }
     });
 
+    // "Contains _"/"Doesn't contain _" clues
     for (let i = 'A'; i <= 'Z'; i++) {
         if (value.toUpperCase().indexOf(i) !== -1) {
             possibleClues.push({
@@ -193,6 +189,7 @@ function _addStringClues(possibleClues, value, type) {
         }
     }
 
+    // Length Clue
     possibleClues.push({
         type: type,
         constraint: {
