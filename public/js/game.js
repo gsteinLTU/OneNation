@@ -28,6 +28,8 @@ var numericClueUnits = {
     'land_area': 'km<sup>2</sup>',
 };
 
+var timerTimeout;
+
 // Makes numeric type clues into text descriptions
 var numericClueToString = function (clue) {
     return cluetexts[clue.type] + ' ' + clue.constraint.type + ' ' + Number(clue.constraint.value).toLocaleString() + ' ' + numericClueUnits[clue.type];
@@ -121,20 +123,31 @@ var increaseTimer = function () {
     }
 
     $('#timer').text(temp[0] + ':' + (temp[1] < 10 ? '0' : '') + temp[1]);
-    setTimeout(increaseTimer, 1000);
 };
 
 $(function () {
     $('#guess').val('');
 
-    // Get intiial clues
+    // Get initial clues
+    startGame();
+
+    $('#giveup').click(function () {
+        clearTimeout(timerTimeout);
+        $('#guess').prop("disabled", true);
+        $.post('/play', {action: 'giveup'}, function (data, status) {
+            $('#answerfield').text(JSON.parse(data).answer);
+            $('#answer').show();
+        });
+    });
+});
+
+function startGame() {
     $.post('/play', { action: 'clues' }, function (data, status) {
         // TODO: handle error cases
-
         clues = JSON.parse(data).clues;
         remaining = JSON.parse(data).remaining;
         updateCluesList();
-        setTimeout(increaseTimer, 1000);
+        timerTimeout = setInterval(increaseTimer, 1000);
 
         $('#guess').change(function () {
             var guess = $('#guess').val();
@@ -167,6 +180,6 @@ $(function () {
                     }, 1000);
                 }
             });
-        })
+        });
     });
-});
+}

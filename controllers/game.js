@@ -271,8 +271,6 @@ let clues = [exports._generateClue(target, [])];
  * Display game interface
  */
 exports.getGame = (req, res, next) => {
-    let target = exports._pickCountry();
-    let clues = [exports._generateClue(target, [])];
     res.render('game/game.ejs', { pageTitle: 'Play - OneNation' });
 };
 
@@ -280,15 +278,17 @@ exports.getGame = (req, res, next) => {
  * Handle some game API requests
  */
 exports.postGame = (req, res, next) => {
+    // Initial clue request
     if (req.body.action === 'clues') {
         res.send(JSON.stringify({
             clues: clues,
             remaining: exports._getRemaingCountries(clues).length
         }));
+        return;
     }
 
+    // Player is making a guess
     if (req.body.action === 'guess') {
-
         let country = exports._findID(req.body.guess);
         if (exports._matchesClues(country, clues)) {
             if (exports._getRemaingCountries(clues).length === 1) {
@@ -313,5 +313,14 @@ exports.postGame = (req, res, next) => {
                 matching: clues.map(clue => exports._matchClue(country, clue)),
             }));
         }
+        return;
+    }
+
+    // If player gives up, send answer
+    if (req.body.action === 'giveup') {
+        res.send(JSON.stringify({
+            answer: data[target].names[0]
+        }));
+        return;
     }
 };

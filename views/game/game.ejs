@@ -1,6 +1,11 @@
 <%- include('../includes/header.ejs') %>
 
 <div class="container">
+    <div id="answer" style="display: none;">
+        <h3>The correct answer was: </h3><h2 id="answerfield"></h2>
+        <hr />
+    </div>
+
     <h3>Time:</h3>
     <h2 id="timer">0:00</h2>
     <hr />
@@ -21,7 +26,7 @@
         </li>
     </ul>
     <hr />
-    <a class="btn">Give Up?</a>
+    <a class="btn" id="giveup">Give Up?</a>
     <br />
     <br />
 </div>
