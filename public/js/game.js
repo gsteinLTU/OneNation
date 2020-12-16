@@ -143,10 +143,13 @@ $(function () {
 
 function startGame() {
     $.post('/play', { action: 'clues' }, function (data, status) {
+        const parsed = JSON.parse(data);
         // TODO: handle error cases
-        clues = JSON.parse(data).clues;
-        remaining = JSON.parse(data).remaining;
+        clues = parsed.clues;
+        remaining = parsed.remaining;
         updateCluesList();
+        startTime = Math.round((Date.now() - parsed.startTime) / 1000);
+        $('#timer').text(`${Math.floor(startTime / 60)}:${startTime % 60}`)
         timerTimeout = setInterval(increaseTimer, 1000);
 
         $('#guess').change(function () {

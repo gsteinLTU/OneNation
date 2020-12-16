@@ -266,6 +266,7 @@ exports.getGameIndex = (req, res, next) => {
 
 let target = exports._pickCountry();
 let clues = [exports._generateClue(target, [])];
+let startTime = Date.now();
 
 /**
  * Display game interface
@@ -282,7 +283,8 @@ exports.postGame = (req, res, next) => {
     if (req.body.action === 'clues') {
         res.send(JSON.stringify({
             clues: clues,
-            remaining: exports._getRemaingCountries(clues).length
+            remaining: exports._getRemaingCountries(clues).length,
+            startTime: startTime
         }));
         return;
     }
