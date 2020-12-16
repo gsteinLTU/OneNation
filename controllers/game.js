@@ -291,30 +291,7 @@ exports.postGame = (req, res, next) => {
 
     // Player is making a guess
     if (req.body.action === 'guess') {
-        let country = exports._findID(req.body.guess);
-        if (exports._matchesClues(country, clues)) {
-            if (exports._getRemaingCountries(clues).length === 1) {
-                res.send(JSON.stringify({
-                    correct: true,
-                    clues: clues,
-                    remaining: 1,
-                    winner: true,
-                }));
-            } else {
-                clues = [...clues, exports._generateClue(target, clues)];
-                res.send(JSON.stringify({
-                    correct: true,
-                    clues: clues,
-                    remaining: exports._getRemaingCountries(clues).length,
-                    winner: false,
-                }));
-            }
-        } else {
-            res.send(JSON.stringify({
-                correct: false,
-                matching: clues.map(clue => exports._matchClue(country, clue)),
-            }));
-        }
+        handleGuess(req, res);
         return;
     }
 
@@ -326,3 +303,30 @@ exports.postGame = (req, res, next) => {
         return;
     }
 };
+
+function handleGuess(req, res) {
+    let country = exports._findID(req.body.guess);
+    if (exports._matchesClues(country, clues)) {
+        if (exports._getRemaingCountries(clues).length === 1) {
+            res.send(JSON.stringify({
+                correct: true,
+                clues: clues,
+                remaining: 1,
+                winner: true,
+            }));
+        } else {
+            clues = [...clues, exports._generateClue(target, clues)];
+            res.send(JSON.stringify({
+                correct: true,
+                clues: clues,
+                remaining: exports._getRemaingCountries(clues).length,
+                winner: false,
+            }));
+        }
+    } else {
+        res.send(JSON.stringify({
+            correct: false,
+            matching: clues.map(clue => exports._matchClue(country, clue)),
+        }));
+    }
+}

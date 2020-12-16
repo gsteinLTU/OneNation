@@ -77,20 +77,7 @@ var clueToString = function (clue) {
     }
 
     if (clue.type === 'region') {
-        var temp = '';
-
-        if (clue.constraint.length > 1) {
-            for (var i = 0; i < clue.constraint.length - 1; i++) {
-                temp += clue.constraint[i] + ', ';
-            }
-
-            temp += 'or ' + clue.constraint[clue.constraint.length - 1];
-
-        } else {
-            temp = clue.constraint[0];
-        }
-
-        return 'In ' + temp;
+        return regionClueToString(clue);
     }
 
     return cluetexts[clue.type];
@@ -134,12 +121,30 @@ $(function () {
     $('#giveup').click(function () {
         clearTimeout(timerTimeout);
         $('#guess').prop("disabled", true);
+        $('#giveup').addClass("disabled");
         $.post('/play', {action: 'giveup'}, function (data, status) {
             $('#answerfield').text(JSON.parse(data).answer);
             $('#answer').show();
         });
     });
 });
+
+function regionClueToString(clue) {
+    var temp = '';
+
+    if (clue.constraint.length > 1) {
+        for (var i = 0; i < clue.constraint.length - 1; i++) {
+            temp += clue.constraint[i] + ', ';
+        }
+
+        temp += 'or ' + clue.constraint[clue.constraint.length - 1];
+
+    } else {
+        temp = clue.constraint[0];
+    }
+
+    return 'In ' + temp;
+}
 
 function startGame() {
     $.post('/play', { action: 'clues' }, function (data, status) {
@@ -149,7 +154,8 @@ function startGame() {
         remaining = parsed.remaining;
         updateCluesList();
         startTime = Math.round((Date.now() - parsed.startTime) / 1000);
-        $('#timer').text(`${Math.floor(startTime / 60)}:${startTime % 60}`)
+        seconds = startTime % 60;
+        $('#timer').text(`${Math.floor(startTime / 60)}:${seconds < 10? "0" : ""}${seconds}`)
         timerTimeout = setInterval(increaseTimer, 1000);
 
         $('#guess').change(function () {
