@@ -7,4 +7,4 @@ Based on [these quizzes](https://www.jetpunk.com/user-quizzes/176412/category-el
 
 ## Current Status
 
-Almost working! The game is mostly playable, but it isn't handling states properly.
+Mostly working! The game is playable-ish, needs a few interface improvements and to be hosted somewhere.
