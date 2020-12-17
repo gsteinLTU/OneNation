@@ -9,12 +9,14 @@ exports.getGameIndex = (req, res, next) => {
     res.render('game/index.ejs', { pageTitle: 'OneNation' });
 };
 
-let state = new GameState();
-
 /**
  * Display game interface
  */
 exports.getGame = (req, res, next) => {
+    if (req.session.gamestate == undefined){
+        req.session.gamestate = new GameState();
+    }
+
     res.render('game/game.ejs', { pageTitle: 'Play - OneNation' });
 };
 
@@ -22,12 +24,17 @@ exports.getGame = (req, res, next) => {
  * Handle some game API requests
  */
 exports.postGame = (req, res, next) => {
+
+    if (req.session.gamestate == undefined){
+        req.session.gamestate = new GameState();
+    }
+
     // Initial clue request
     if (req.body.action === 'clues') {
         res.send(JSON.stringify({
-            clues: state.clues,
-            remaining: _getRemaingCountries(state.clues).length,
-            startTime: state.startTime
+            clues: req.session.gamestate.clues,
+            remaining: _getRemaingCountries(req.session.gamestate.clues).length,
+            startTime: req.session.gamestate.startTime
         }));
         return;
     }
@@ -41,24 +48,30 @@ exports.postGame = (req, res, next) => {
     // If player gives up, send answer
     if (req.body.action === 'giveup') {
         res.send(JSON.stringify({
-            answer: _nameFromID(state.target)
+            answer: _nameFromID(req.session.gamestate.target)
         }));
+
+        // Reset session's gamestate to prevent cheating
+        req.session.gamestate = undefined;
+        req.session.save();
         return;
     }
 };
 
 function handleGuess(req, res) {
     let country = _findID(req.body.guess);
-    if (_matchesClues(country, state.clues)) {
-        const remaining = _getRemaingCountries(state.clues).length;
+    if (_matchesClues(country, req.session.gamestate.clues)) {
+        const remaining = _getRemaingCountries(req.session.gamestate.clues).length;
 
+        // If we need a new clue, add it
         if (remaining !== 1) {
-            state.clues = [...state.clues, _generateClue(state.target, state.clues)];
+            req.session.gamestate.clues = [...req.session.gamestate.clues, _generateClue(req.session.gamestate.target, req.session.gamestate.clues)];
         } 
 
+        // Send state
         res.send(JSON.stringify({
             correct: true,
-            clues: state.clues,
+            clues: req.session.gamestate.clues,
             remaining: remaining,
             winner: remaining === 1,
         }));
@@ -67,7 +80,7 @@ function handleGuess(req, res) {
     } else {
         res.send(JSON.stringify({
             correct: false,
-            matching: state.clues.map(clue => _matchClue(country, clue)),
+            matching: req.session.gamestate.clues.map(clue => _matchClue(country, clue)),
         }));
     }
 }
