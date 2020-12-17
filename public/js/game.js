@@ -1,90 +1,9 @@
 var clues = [];
 var remaining = [];
-
-var cluetexts = {
-    'land_area': 'Land Area',
-    'population': 'Population',
-    'peak_elevation': 'Peak Elevation',
-    'name': 'Name',
-    'capitalname': 'Capital Name',
-    'landlocked': 'Landlocked',
-    'region': 'Region',
-};
-
-var numericClueTypes = [
-    'population',
-    'peak_elevation',
-    'land_area',
-];
-
-var stringClueTypes = [
-    'name',
-    'capitalname',
-];
-
-var numericClueUnits = {
-    'population': 'people',
-    'peak_elevation': 'm',
-    'land_area': 'km<sup>2</sup>',
-};
-
 var timerTimeout;
 
-// Makes numeric type clues into text descriptions
-var numericClueToString = function (clue) {
-    return cluetexts[clue.type] + ' ' + clue.constraint.type + ' ' + Number(clue.constraint.value).toLocaleString() + ' ' + numericClueUnits[clue.type];
-};
-
-// Makes string type clues into text descriptions
-var stringClueToString = function (clue) {
-    var output = cluetexts[clue.type] + ' ';
-
-    if (clue.constraint.type === 'startsWith') {
-        output += ' starts with ' + clue.constraint.value;
-    }
-
-    if (clue.constraint.type === 'endsWith') {
-        output += ' ends with ' + clue.constraint.value;
-    }
-
-    if (clue.constraint.type === 'contains') {
-        output += ' contains ' + clue.constraint.value;
-    }
-
-    if (clue.constraint.type === 'nocontains') {
-        output += ' does not contain ' + clue.constraint.value;
-    }
-
-    if (clue.constraint.type === 'length') {
-        output += ' is ' + clue.constraint.value + ' letters long';
-    }
-
-    return output;
-};
-
-// Turns a clue object into a text description
-var clueToString = function (clue) {
-    if (numericClueTypes.indexOf(clue.type) !== -1) {
-        return numericClueToString(clue);
-    }
-
-    if (stringClueTypes.indexOf(clue.type) !== -1) {
-        return stringClueToString(clue);
-    }
-
-    if (clue.type === 'landlocked') {
-        return 'Is ' + (clue.constraint === true ? '' : 'not ') + 'landlocked';
-    }
-
-    if (clue.type === 'region') {
-        return regionClueToString(clue);
-    }
-
-    return cluetexts[clue.type];
-};
-
 // Updates the clues list on the page
-var updateCluesList = function () {
+function updateCluesList() {
     var tempClues = document.createElement('ul');
 
     for (var i = 0; i < clues.length; i++) {
@@ -97,9 +16,9 @@ var updateCluesList = function () {
 
     $('#clues').html(tempClues.innerHTML);
     $('#remaining').text(remaining);
-};
+}
 
-var increaseTimer = function () {
+function increaseTimer() {
     var temp = $('#timer').text().split(':');
 
     if (temp[1] == '59') {
@@ -110,7 +29,7 @@ var increaseTimer = function () {
     }
 
     $('#timer').text(temp[0] + ':' + (temp[1] < 10 ? '0' : '') + temp[1]);
-};
+}
 
 $(function () {
     $('#guess').val('');
@@ -122,32 +41,15 @@ $(function () {
         clearTimeout(timerTimeout);
         $('#guess').prop("disabled", true);
         $('#giveup').addClass("disabled");
-        $.post('/play', {action: 'giveup'}, function (data, status) {
+        $.post('/play', {action: 'giveup', _csrf:_csrf}, function (data) {
             $('#answerfield').text(JSON.parse(data).answer);
             $('#answer').show();
         });
     });
 });
 
-function regionClueToString(clue) {
-    var temp = '';
-
-    if (clue.constraint.length > 1) {
-        for (var i = 0; i < clue.constraint.length - 1; i++) {
-            temp += clue.constraint[i] + ', ';
-        }
-
-        temp += 'or ' + clue.constraint[clue.constraint.length - 1];
-
-    } else {
-        temp = clue.constraint[0];
-    }
-
-    return 'In ' + temp;
-}
-
 function startGame() {
-    $.post('/play', { action: 'clues' }, function (data, status) {
+    $.post('/play', { action: 'clues', _csrf:_csrf }, function (data) {
         const parsed = JSON.parse(data);
         // TODO: handle error cases
         clues = parsed.clues;
@@ -165,7 +67,7 @@ function startGame() {
                 return;
             }
 
-            $.post('/play', { action: 'guess', guess: guess }, function (data, status) {
+            $.post('/play', { action: 'guess', guess: guess, _csrf:_csrf }, function (data) {
                 // TODO: handle error cases
                 var parsed = JSON.parse(data);
                 console.log(parsed);
@@ -174,6 +76,10 @@ function startGame() {
                     remaining = parsed.remaining;
                     updateCluesList();
                     $('#guess').val('');
+                }
+
+                if(parsed.matching == undefined) {
+                    parsed.matching = clues.map(() => parsed.correct);
                 }
 
                 // Display right/wrong answers

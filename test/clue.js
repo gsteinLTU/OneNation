@@ -1,4 +1,5 @@
-const { _matchClue, _matchesClues, _getRemaingCountries, _countriesList } = require('../controllers/game');
+const { _countriesList } = require('../models/Countries');
+const { _matchClue, _matchesClues, _getRemaingCountries, } = require('../models/Clues');
 const { expect } = require('chai');
 
 describe('clue matching tests', () => {
