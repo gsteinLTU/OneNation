@@ -177,6 +177,7 @@ function _addStringClues(possibleClues, value, type) {
         }
     });
 }
+
 /**
  * Generate the next clue in the sequence
  */
@@ -211,16 +212,12 @@ exports._generateClue = (country, existingClues) => {
         });
     }
 
-    if (remainingTypes.indexOf('population') !== -1) {
-        _addNumericClues(possibleClues, countryData, 'population');
-    }
+    let numericClueTypes = ['population', 'peak_elevation', 'land_area'];
 
-    if (remainingTypes.indexOf('peak_elevation') !== -1) {
-        _addNumericClues(possibleClues, countryData, 'peak_elevation');
-    }
-
-    if (remainingTypes.indexOf('land_area') !== -1) {
-        _addNumericClues(possibleClues, countryData, 'land_area');
+    for (const clueType of numericClueTypes) {
+        if (remainingTypes.indexOf(clueType) !== -1) {
+            _addNumericClues(possibleClues, countryData, clueType);
+        }
     }
 
     if (remainingTypes.indexOf('region') !== -1) {
