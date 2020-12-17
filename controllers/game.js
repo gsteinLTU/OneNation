@@ -17,7 +17,7 @@ exports.getGame = (req, res, next) => {
         req.session.gamestate = new GameState();
     }
 
-    res.render('game/game.ejs', { pageTitle: 'Play - OneNation' });
+    res.render('game/game.ejs', { pageTitle: 'Play - OneNation', csrfToken: req.csrfToken() });
 };
 
 /**
