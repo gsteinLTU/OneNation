@@ -66,6 +66,10 @@ const _regions = [
 exports._matchClue = (country, clue) => {
     const countryData = data[country];
 
+    if(countryData == undefined){
+        return false;
+    }
+
     switch (clue.type) {
         case 'name':
             return _testStringClue(countryData.names[0], clue);

@@ -50,22 +50,20 @@ exports.postGame = (req, res, next) => {
 function handleGuess(req, res) {
     let country = _findID(req.body.guess);
     if (_matchesClues(country, state.clues)) {
-        if (_getRemaingCountries(state.clues).length === 1) {
-            res.send(JSON.stringify({
-                correct: true,
-                clues: state.clues,
-                remaining: 1,
-                winner: true,
-            }));
-        } else {
+        const remaining = _getRemaingCountries(state.clues).length;
+
+        if (remaining !== 1) {
             state.clues = [...state.clues, _generateClue(state.target, state.clues)];
-            res.send(JSON.stringify({
-                correct: true,
-                clues: state.clues,
-                remaining: _getRemaingCountries(state.clues).length,
-                winner: false,
-            }));
-        }
+        } 
+
+        res.send(JSON.stringify({
+            correct: true,
+            clues: state.clues,
+            remaining: remaining,
+            winner: remaining === 1,
+        }));
+
+
     } else {
         res.send(JSON.stringify({
             correct: false,
