@@ -3,7 +3,7 @@ var remaining = [];
 var timerTimeout;
 
 // Updates the clues list on the page
-var updateCluesList = function () {
+function updateCluesList() {
     var tempClues = document.createElement('ul');
 
     for (var i = 0; i < clues.length; i++) {
@@ -16,9 +16,9 @@ var updateCluesList = function () {
 
     $('#clues').html(tempClues.innerHTML);
     $('#remaining').text(remaining);
-};
+}
 
-var increaseTimer = function () {
+function increaseTimer() {
     var temp = $('#timer').text().split(':');
 
     if (temp[1] == '59') {
@@ -29,7 +29,7 @@ var increaseTimer = function () {
     }
 
     $('#timer').text(temp[0] + ':' + (temp[1] < 10 ? '0' : '') + temp[1]);
-};
+}
 
 $(function () {
     $('#guess').val('');
@@ -41,7 +41,7 @@ $(function () {
         clearTimeout(timerTimeout);
         $('#guess').prop("disabled", true);
         $('#giveup').addClass("disabled");
-        $.post('/play', {action: 'giveup', _csrf:_csrf}, function (data, status) {
+        $.post('/play', {action: 'giveup', _csrf:_csrf}, function (data) {
             $('#answerfield').text(JSON.parse(data).answer);
             $('#answer').show();
         });
@@ -49,7 +49,7 @@ $(function () {
 });
 
 function startGame() {
-    $.post('/play', { action: 'clues', _csrf:_csrf }, function (data, status) {
+    $.post('/play', { action: 'clues', _csrf:_csrf }, function (data) {
         const parsed = JSON.parse(data);
         // TODO: handle error cases
         clues = parsed.clues;
@@ -67,7 +67,7 @@ function startGame() {
                 return;
             }
 
-            $.post('/play', { action: 'guess', guess: guess, _csrf:_csrf }, function (data, status) {
+            $.post('/play', { action: 'guess', guess: guess, _csrf:_csrf }, function (data) {
                 // TODO: handle error cases
                 var parsed = JSON.parse(data);
                 console.log(parsed);
@@ -79,7 +79,7 @@ function startGame() {
                 }
 
                 if(parsed.matching == undefined) {
-                    parsed.matching = clues.map(clue => parsed.correct);
+                    parsed.matching = clues.map(() => parsed.correct);
                 }
 
                 // Display right/wrong answers

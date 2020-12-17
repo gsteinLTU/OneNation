@@ -28,7 +28,7 @@ var numericClueUnits = {
 // Makes numeric type clues into text descriptions
 function numericClueToString(clue) {
     return cluetexts[clue.type] + ' ' + clue.constraint.type + ' ' + Number(clue.constraint.value).toLocaleString() + ' ' + numericClueUnits[clue.type];
-};
+}
 
 // Makes string type clues into text descriptions
 function stringClueToString(clue) {
@@ -55,7 +55,7 @@ function stringClueToString(clue) {
     }
 
     return output;
-};
+}
 
 // Turns a clue object into a text description
 function clueToString(clue) {
@@ -76,7 +76,7 @@ function clueToString(clue) {
     }
 
     return cluetexts[clue.type];
-};
+}
 
 function regionClueToString(clue) {
     var temp = '';
