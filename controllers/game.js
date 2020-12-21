@@ -68,14 +68,23 @@ function handleGuess(req, res) {
             req.session.gamestate.clues = [...req.session.gamestate.clues, _generateClue(req.session.gamestate.target, req.session.gamestate.clues)];
         } 
 
+        const winner = remaining === 1;
+
         // Send state
         res.send(JSON.stringify({
             correct: true,
             clues: req.session.gamestate.clues,
             remaining: remaining,
-            winner: remaining === 1,
+            winner: winner,
+            answer: winner? _nameFromID(req.session.gamestate.target) : ''
         }));
 
+        // End game if won
+        if (winner) {
+            // Reset session's gamestate to prevent cheating
+            req.session.gamestate = undefined;
+            req.session.save();
+        }
 
     } else {
         res.send(JSON.stringify({

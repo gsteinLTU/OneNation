@@ -38,12 +38,9 @@ $(function () {
     startGame();
 
     $('#giveup').click(function () {
-        clearTimeout(timerTimeout);
-        $('#guess').prop("disabled", true);
-        $('#giveup').addClass("disabled");
+        endGame();
         $.post('/play', {action: 'giveup', _csrf:_csrf}, function (data) {
-            $('#answerfield').text(JSON.parse(data).answer);
-            $('#answer').show();
+            endGame(false, JSON.parse(data).answer);
         });
     });
 });
@@ -76,6 +73,10 @@ function startGame() {
                     remaining = parsed.remaining;
                     updateCluesList();
                     $('#guess').val('');
+
+                    if(parsed.winner){
+                        endGame(parsed.winner, parsed.answer);
+                    }
                 }
 
                 if(parsed.matching == undefined) {
@@ -98,3 +99,20 @@ function startGame() {
         });
     });
 }
+function endGame(winner, answer) {
+    clearTimeout(timerTimeout);
+    $('#guess').prop("disabled", true);
+    $('#giveup').addClass("disabled");
+    
+    if(answer != null){
+        $('#answerfield').text(answer);
+        if(winner){
+            $('#winnertext').show();
+        } else {
+            $('#losertext').show();
+        }
+
+        $('#answer').show();
+    }
+}
+
