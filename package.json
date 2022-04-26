@@ -24,7 +24,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "grunt": "^1.3.0",
-    "mocha": "^8.2.1"
+    "mocha": "^9.2.2"
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",
