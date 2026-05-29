@@ -1,4 +1,4 @@
-const data = require('../data/factbook-min.json');
+const data = require('../data/countries.json');
 exports._countriesList = Object.keys(data);
 
 /**

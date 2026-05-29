@@ -1,10 +1,42 @@
-# OneNation
-![Build Status](https://travis-ci.com/gsteinLTU/OneNation.svg?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/dac3cca3f6ca246c873b/maintainability)](https://codeclimate.com/github/gsteinLTU/OneNation/maintainability)
+# sv
 
-A game of categorical elimination and geographical guessing. You will receive a series of clues that describe a country. Each time you name a country that fits all the clues so far, you will be given another clue. In the end, only one nation will be the correct answer. Find it to win!
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-Based on [these quizzes](https://www.jetpunk.com/user-quizzes/176412/category-elimination-countries) I saw on various quiz sites.
+## Creating a project
 
-## Current Status
+If you're seeing this, you've probably already done this step. Congrats!
 
-Mostly working! The game is playable-ish, needs a few interface improvements and to be hosted somewhere.
+```sh
+# create a new project
+npx sv create my-app
+```
+
+To recreate this project with the same configuration:
+
+```sh
+# recreate this project
+npx sv@0.15.3 create --template minimal --types ts --add prettier eslint vitest="usages:unit" sveltekit-adapter="adapter:static" --no-download-check --no-install .
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```sh
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

@@ -1,5 +1,5 @@
-const { _pickCountry } = require('../models/Countries');
-const { _generateClue } = require('../models/Clues');
+const { _pickCountry } = require('./Countries.cjs');
+const { _generateClue } = require('./Clues.cjs');
 
 module.exports = class GameState {
     constructor () {

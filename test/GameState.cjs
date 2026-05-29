@@ -1,6 +1,6 @@
-const GameState = require('../models/GameState');
-const { _countriesList } = require('../models/Countries');
-const { _matchClue } = require('../models/Clues');
+const GameState = require('../models/GameState.cjs');
+const { _countriesList } = require('../models/Countries.cjs');
+const { _matchClue } = require('../models/Clues.cjs');
 
 const { expect } = require('chai');
 
