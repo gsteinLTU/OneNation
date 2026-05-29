@@ -7,6 +7,7 @@
 	const allCountryNames = countriesList.map((id) => countries[id].names[0]).sort();
 
 	let guessValue = $state('');
+	let timerStart = $state<number | null>(null);
 	let elapsed = $state(0);
 	let flashResult = $state<boolean[] | null>(null);
 	let inputEl: HTMLInputElement | undefined;
@@ -21,10 +22,14 @@
 	);
 
 	$effect(() => {
-		const start = game.startTime;
-		elapsed = Math.floor((Date.now() - start) / 1000);
-		if (game.gameOver) return;
+		// Read all deps before any early return so the effect tracks them all.
+		const start = timerStart;
+		const over = game.gameOver;
 
+		if (start === null) { elapsed = 0; return; }
+		if (over) return;
+
+		elapsed = Math.floor((Date.now() - start) / 1000);
 		const id = setInterval(() => {
 			elapsed = Math.floor((Date.now() - start) / 1000);
 		}, 1000);
@@ -52,7 +57,7 @@
 		showHelp = false;
 		if (isFirstLoad) {
 			isFirstLoad = false;
-			game.startTime = Date.now();
+			timerStart = Date.now();
 			setTimeout(() => inputEl?.focus(), 50);
 		}
 	}
@@ -61,14 +66,28 @@
 		game.newGame();
 		guessValue = '';
 		flashResult = null;
+		timerStart = Date.now();
 		inputEl?.focus();
 	}
 </script>
 
 {#if showHelp}
-	<div class="modal-backdrop" onclick={startPlaying}>
-		<div class="modal" onclick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
-			<h2>How to Play</h2>
+	<div
+		class="modal-backdrop"
+		role="presentation"
+		onclick={startPlaying}
+		onkeydown={(e) => e.key === 'Escape' && startPlaying()}
+	>
+		<div
+			class="modal"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="modal-title"
+			tabindex="-1"
+			onclick={(e) => e.stopPropagation()}
+			onkeydown={(e) => e.stopPropagation()}
+		>
+			<h2 id="modal-title">How to Play</h2>
 			<ul>
 				<li>A secret country has been selected.</li>
 				<li>Each clue describes a property of that country.</li>
