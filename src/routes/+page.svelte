@@ -18,7 +18,7 @@
 	const filteredNames = $derived(
 		hardMode
 			? allCountryNames
-			: getRemainingCountries(game.clues).map((id) => countries[id].names[0]).sort()
+			: getRemainingCountries(game.clues.slice(0, -1)).map((id) => countries[id].names[0]).sort()
 	);
 
 	$effect(() => {

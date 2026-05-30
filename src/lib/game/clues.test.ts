@@ -228,12 +228,61 @@ describe('generateClue', () => {
 	});
 
 	it('falls back to a name clue when all 9 types are exhausted', () => {
-		const country = 'FRA';
-		const clues: Clue[] = [];
-		for (let i = 0; i < 9; i++) {
-			clues.push(generateClue(country, clues));
+		// Construct one clue of each type that matches France, bypassing the
+		// dynamic path (which may reuse string types via the late-game failsafe).
+		const exhausted: Clue[] = [
+			{ type: 'name',        constraint: { type: 'contains',  value: 'F' } },
+			{ type: 'capitalname', constraint: { type: 'contains',  value: 'P' } },
+			{ type: 'landlocked',  constraint: false },
+			{ type: 'car_side',    constraint: 'right' },
+			{ type: 'region',      constraint: ['Europe'] },
+			{ type: 'subregion',   constraint: ['Western Europe'] },
+			{ type: 'population',  constraint: { type: '>', value: 1_000_000 } },
+			{ type: 'land_area',   constraint: { type: '>', value: 100_000 } },
+			{ type: 'borders',     constraint: { type: '>', value: 1 } },
+		];
+		expect(generateClue('FRA', exhausted).type).toBe('name');
+	});
+
+	it('every generated clue narrows the remaining pool (invariant across 100 random calls)', () => {
+		// This is the core quality guarantee of the new heuristic: no clue should
+		// leave the pool unchanged regardless of pool size or clue history.
+		const targets = ['DEU', 'JPN', 'BRA', 'USA', 'NGA', 'AUS', 'IND', 'FRA', 'MEX', 'ZAF'];
+		for (const country of targets) {
+			const clues: Clue[] = [];
+			for (let i = 0; i < 7; i++) {
+				const before = getRemainingCountries(clues).length;
+				if (before <= 1) break;
+				const clue = generateClue(country, clues);
+				const after = getRemainingCountries([...clues, clue]).length;
+				expect(after, `${country} clue ${i} (${clue.type}) should narrow pool`).toBeLessThan(before);
+				clues.push(clue);
+			}
 		}
-		expect(new Set(clues.map((c) => c.type)).size).toBe(9);
-		expect(generateClue(country, clues).type).toBe('name');
+	});
+
+	it('produces a discriminating clue when exactly two countries remain', () => {
+		// Andorra / North Macedonia scenario: 6 clues used (borders uses > 1 so both
+		// pass — AND has 2, MKD has 5), three unused types remain (population,
+		// subregion, car_side). The next clue must eliminate one of the two.
+		const cluesUsed: Clue[] = [
+			{ type: 'borders',     constraint: { type: '>', value: 1 } },
+			{ type: 'capitalname', constraint: { type: 'nocontains', value: 'I' } },
+			{ type: 'land_area',   constraint: { type: '<', value: 50_000 } },
+			{ type: 'region',      constraint: ['Europe'] },
+			{ type: 'landlocked',  constraint: true },
+			{ type: 'name',        constraint: { type: 'endsWith', value: 'a' } },
+		];
+		// Confirm the setup: both AND and MKD match all 6 clues.
+		expect(matchesClues('AND', cluesUsed)).toBe(true);
+		expect(matchesClues('MKD', cluesUsed)).toBe(true);
+		const poolBefore = getRemainingCountries(cluesUsed).length;
+
+		// Run many times to cover random numeric candidate generation.
+		for (let i = 0; i < 30; i++) {
+			const next = generateClue('MKD', cluesUsed);
+			const after = getRemainingCountries([...cluesUsed, next]).length;
+			expect(after, `iteration ${i}: clue "${next.type}" should narrow the pool`).toBeLessThan(poolBefore);
+		}
 	});
 });

@@ -25,7 +25,7 @@ export class GameState {
 			return { correct: false, matching: this.clues.map((c) => matchClue(id, c)) };
 		}
 
-		if (this.remaining === 1) {
+		if (id === this.target) {
 			this.gameOver = true;
 			this.won = true;
 			this.answer = nameFromId(this.target);
