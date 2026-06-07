@@ -1,42 +1,32 @@
-# sv
+# OneNation
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A geography guessing game of categorical elimination. You receive clues that describe a secret country — each time you guess a country that fits all clues so far, you get another clue. Only one nation will ultimately match every clue. Find it to win!
 
-## Creating a project
+Inspired by [these quizzes](https://www.jetpunk.com/user-quizzes/176412/category-elimination-countries).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## How It Works
 
-```sh
-# create a new project
-npx sv create my-app
-```
+Clues narrow down the set of possible countries across nine dimensions: name, capital, population, land area, bordering countries, landlocked status, driving side, region, and subregion. The game's clue engine selects each new clue to cut the remaining candidates roughly in half.
 
-To recreate this project with the same configuration:
+**Hard mode** shows all 243 countries in the autocomplete rather than only countries still matching the current clues.
 
-```sh
-# recreate this project
-npx sv@0.15.3 create --template minimal --types ts --add prettier eslint vitest="usages:unit" sveltekit-adapter="adapter:static" --no-download-check --no-install .
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Development
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm install
+npm run dev        # dev server at http://localhost:5173
+npm run build      # production build (set BASE_PATH=/OneNation for GitHub Pages)
+npm run preview    # serve the production build locally
+npm run check      # svelte-check + tsc
+npm run test       # Vitest unit tests
+npm run build-data # re-fetch country data from RestCountries API
 ```
 
-## Building
+## Tech Stack
 
-To create a production version of your app:
+- **SvelteKit** (Svelte 5 runes, adapter-static, SSR disabled) — fully static, no server
+- **TypeScript** throughout
+- **Vitest** for unit tests (`src/**/*.test.ts`)
+- Deployed to **GitHub Pages**
 
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Country data comes from the [RestCountries v3.1 API](https://restcountries.com/) and is bundled at build time (`data/countries.json`). Run `npm run build-data` to refresh it.
